@@ -1,4 +1,4 @@
-import react,{useState} from "react";
+import React,{useState} from "react";
 
 function ChoixRadio(props){
     const [radio , setRadio ] = useState([props.tab]);
