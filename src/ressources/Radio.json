@@ -1,0 +1,34 @@
+[   {
+        "id": 1,
+        "name": "fluor-18",
+        "emission": {
+            "principale": "B+ 250keV",
+            "secondaire": " Gamma 511 keV"
+        },
+        "periode": "110",
+        "unite": "minutes",
+        "energie": "moyenne de 250 keV 96.7%"
+    },
+    {
+        "id": 2,
+        "name": "Cesium-137",
+        "emission": {
+            "principale": "B- 175 keV",
+            "secondaire": " Gamma 662 keV"
+        },
+        "periode": "30.1",
+        "unite": "ans",
+        "energie": " Beta 514 keV 94% , X-y 662 keV 85%"
+    },
+    {
+        "id": 3,
+        "name": "Radium-226",
+        "emission": {
+            "principale": "Alpha 4.6 à 7.7 MeV",
+            "secondaire": " Gamma de 0.4 à 2.5 MeV"
+        },
+        "periode": "1600 ",
+        "unite": "ans",
+        "energie": "Alpha 4784 keV 94%"
+    }
+]

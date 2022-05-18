@@ -1,0 +1,18 @@
+.navigation{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-style: normal;
+}
+.link{
+    color: brown;
+    font-style: italic;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    display: inline;
+}
+.link:hover{
+    color:black;
+    text-decoration: underline solid ;
+}
