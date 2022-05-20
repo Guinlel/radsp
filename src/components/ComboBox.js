@@ -9,7 +9,7 @@ function ChoixRadio(props){
     </option>);
 
     return(
-        <select className="choix-radio" onChange={(e)=> props.changeHandler(e.target.value)}>
+        <select className="choix-radio" onClick={(e)=> props.changeHandler(e.target.value)}>
             {optionRadio}
         </select>
     )

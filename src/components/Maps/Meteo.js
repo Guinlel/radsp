@@ -34,7 +34,7 @@ function Meteo(props) {
 
     const VentNul = ()=>{
         if (!speed){
-            return <p> Aucune informations disponibles </p>
+            return <p> Aucune informations disponible </p>
         } else{
             return <div> <p>Vitesse du vent :{speed * 3.6} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 
