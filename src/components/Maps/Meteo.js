@@ -7,11 +7,12 @@ function Meteo(props) {
     const [speed, setSpeed] = useState(0);
     const [deg, setDeg] = useState();
     const [direction, setDirection] = useState("");
-    const [rafale, setRafale] = useState(0);
+    const [raf, setRafale] = useState(0);
     const API_KEY = "4d1836cb9cf0a6b1910a892834b98e55";
     const SearchAPI = "https://api.openweathermap.org/data/2.5/weather?lat=43.8497395&lon=0.6636132&appid=" + API_KEY
-
-
+    // Limitation des chiffres aprés la virgule pour les rafales de vent
+    let rafa = raf*3.6;
+    let rafale = rafa.toFixed(2);
     useEffect(() => {
         navigator.geolocation.watchPosition((position) => {
             setLatitude(position.coords.latitude);
@@ -64,6 +65,8 @@ function Meteo(props) {
             setSpeed(response.data.wind.speed);
             setDeg(response.data.wind.deg);
             setRafale(response.data.wind.gust);
+        }).catch((error)=>{
+            console.log(error);
         })
     }
 
@@ -72,7 +75,7 @@ function Meteo(props) {
         <div>
             <p>Vitesse du vent :{speed * 3.6} km/h</p>
             <p>Orientation du vent: {deg}° , {direction}</p>
-            <p>Rafale: {rafale * 3.6} km/h</p>
+            <p>Rafale: {rafale} km/h</p>
         </div>
     )
 }
