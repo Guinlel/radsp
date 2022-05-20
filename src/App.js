@@ -21,7 +21,7 @@ function App() {
                 <Route path="/calcul-dose" element={<CalculDose/>}/>
                 <Route path="/calcul-perimetre" element={<CalculPerim/>}/>
                 <Route path="/activite-restante" element={<ActiviteRestante/>}/>
-                <Route path="/carte" element={<Geolocalisation/>}/>
+                {/* <Route path="/carte" element={<Geolocalisation/>}/> */}
                 <Route path="*" element={
                     <main>
                         <Navigation/>
