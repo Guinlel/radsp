@@ -1,10 +1,13 @@
 const CACHE_NAME = "RADSP"
-const Cache_Files= ["Home.js","Conversion.js","CalcDose.js","App.js"];
+const Cache_Files= [
+    '/src/App.js',
+    '/src/components/Home.js'
+]
 
 // Installing SW
 self.addEventListener("install",(event)=>{
     console.log("Service installing");
-    event.waitUntil(caches.open(CACHE_NAME).then((cache)=>{cache.addAll(Cache_Files)}))
+    event.waitUntil(caches.open(CACHE_NAME).then((cache)=>{return cache.addAll(Cache_Files)}))
 });
 
 // SW Respond
