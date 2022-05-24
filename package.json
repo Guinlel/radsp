@@ -15,7 +15,13 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^2.1.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-cacheable-response": "^6.5.3",
+    "workbox-core": "^6.5.3",
+    "workbox-expiration": "^6.5.3",
+    "workbox-precaching": "^6.5.3",
+    "workbox-routing": "^6.5.3",
+    "workbox-strategies": "^6.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +39,8 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "devDependencies": {
+    "workbox-webpack-plugin": "^6.5.3"
   }
 }
