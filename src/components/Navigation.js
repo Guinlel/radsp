@@ -10,7 +10,7 @@ function Navigation(){
         <Link to="/calcul-dose" className="link">Calcul de dose</Link>
         <Link to="/calcul-perimetre" className="link">Calcul de périmètre</Link>
         <Link to="/activite-restante" className="link"> Activité restante </Link>
-        <Link to="/carte" className="link">Carte</Link>
+        <Link to ="/meteo" className="link">Meteo</Link>
     </nav>
     )
     

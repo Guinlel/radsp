@@ -4,11 +4,16 @@ const Cache_Files= [
     'static/js/main.chunk.js',
     'static/js/0.chunk.js',
     'static/js/bundle.js',
-    'leaflet@1.8.0/dist/leaflet.js',
     'manifest.json',
     'favicon.ico',
     'sockjs-node/info?t=1653402190477',
-    'logo192.png'
+    'logo192.png',
+    '/static/js/2.chunk.js',
+    '/conversion',
+    '/calcul-dose',
+    '/calcul-perimetre',
+    '/activite-restante',
+    '/meteo',
 ]
 
 // Installing SW

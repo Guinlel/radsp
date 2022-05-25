@@ -9,7 +9,6 @@ import CalculDose from './components/Calculatrice/CalcDose';
 import CalculPerim from './components/Calculatrice/CalcPerim';
 import ActiviteRestante from './components/Calculatrice/ActRestante';
 import Meteo from './components/Maps/Meteo';
-import Geolocalisation from './components/Maps/Geo';
 
 function App() {
     
@@ -21,7 +20,7 @@ function App() {
                 <Route path="/calcul-dose" element={<CalculDose/>}/>
                 <Route path="/calcul-perimetre" element={<CalculPerim/>}/>
                 <Route path="/activite-restante" element={<ActiviteRestante/>}/>
-                <Route path="/carte" element={<Meteo/>}/>
+                <Route path="/meteo" element={<Meteo/>}/>
                 <Route path="*" element={
                     <main>
                         <Navigation/>
