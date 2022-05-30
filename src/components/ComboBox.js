@@ -1,18 +1,33 @@
 import React,{useState} from "react";
+import {FormControl, MenuItem, Select , SelectChangeEvent, Box, InputLabel,FormHelperText} from '@mui/material';
 
 function ChoixRadio(props){
     const [radio , setRadio ] = useState([props.tab]);
     const radios = radio[0];
+    // const optionRadio = radios.map((radio)=>
+    // <option key={radio.id} value={radio.id} >
+    //     {radio.name}
+    // </option>);
+
     const optionRadio = radios.map((radio)=>
-    <option key={radio.id} value={radio.id} >
-        {radio.name}
-    </option>);
+        <MenuItem key={radio.id} value={radio.id}>{radio.name}</MenuItem>
+    )
 
     return(
-        <select className="choix-radio" onClick={(e)=> props.changeHandler(e.target.value)}>
+        // <select className="choix-radio" >
+        //     <option>Veuillez Choisir un Element</option>
+        //     {optionRadio}
+        // </select>
+        <Box sx={{minWidth : 300}}>
+            <FormControl>
+            <InputLabel>Element</InputLabel>
+            <Select autoWidth label="Element" onChange={(e)=> props.changeHandler(e.target.value)}>
             {optionRadio}
-        </select>
-    )
+            </Select>
+            <FormHelperText>Selectionner un élément</FormHelperText>
+            </FormControl>
+        </Box>
+    )       
 }
 
 export default ChoixRadio;

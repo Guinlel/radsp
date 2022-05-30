@@ -1,3 +1,4 @@
+import { Button, TextField } from "@mui/material";
 import React from "react";
 import {useState} from "react";
 import Navigation from "../Navigation";
@@ -25,16 +26,13 @@ function CalculDose(){
     return(
         <div className="info-calcul-dose">
             <Navigation/>      
-            <h2> Dose mesuré </h2>
-            <input type="texte"onChange={(e)=> setDoseM(e.target.value)} ></input><HandleUnite HandleChange={HandleChangeUnite}/>
-            <h2>Distance de la dose mesuré par rapport à l'incident (m)</h2>
-            <input type="texte"onChange={(e)=> setDistanceInc(e.target.value) } ></input>
-            <h2>Distance de la dose recherché (m)</h2> 
-            <input type="texte" onChange={(e)=> setDistMes(e.target.value) } ></input>
-            <h2>Dose recherché :</h2>
-            <input type="texte"  value={doseRech} readOnly disabled></input> <p>{unite}</p>
-            <button onClick={()=>Calcul()} >Validez ! </button>
+            <TextField label="Dose mesuré" onChange={(e)=> setDoseM(e.target.value)}></TextField>
+            <HandleUnite HandleChange={HandleChangeUnite}/>
+            <TextField label="Distance dose mesuré (m)" onChange={(e)=> setDistanceInc(e.target.value) }></TextField>
+            <TextField label="Distance dose recherché (m)" onChange={(e)=> setDistMes(e.target.value)}></TextField>
+            <TextField label="Dose recherché" value={doseRech +" "+ unite } readOnly disabled></TextField>
+            <Button variant="contained" onClick={()=>Calcul()}>Validez ! </Button>
         </div>
     )
 }
-export default CalculDose;
+export default CalculDose; 

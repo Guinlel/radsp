@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {TextField} from'@mui/material';
 import Navigation from '../Navigation';
 import './Conversion.css';
 
@@ -26,21 +27,17 @@ function Conversion (value){
       setGBq(value*convGBq);
       setTBq(value*convTBq);
     }
-    return <div className="render-conversion">    
-    <Navigation/>    
-      <h2>Valeur Ci:</h2>
-      <input type="text" onChange={e => Conversion(e.target.value)}></input>    
-      <h2> Valeur Bq :</h2>
-      <input type="text" value={bq} disabled></input>
-      <h2> Valeur KBq</h2>
-      <input type="text" value={kbq} disabled></input>
-      <h2> Valeur MBq</h2>
-      <input type="text" value={mbq} disabled></input>
-      <h2> Valeur GBq</h2>
-      <input type="text" value={gbq} disabled></input>
-      <h2> Valeur TBq</h2>
-      <input type="text" value={tbq} disabled></input>
-      </div>
+    return (
+    <div className="render-conversion">    
+    <Navigation/>  
+      <TextField label="CI" onChange={e => Conversion(e.target.value)}></TextField>
+      <TextField label="Bq" value={bq} disabled></TextField> 
+      <TextField label="KBq" value={kbq} disabled></TextField>
+      <TextField label="MBq" value={mbq} disabled></TextField>
+      <TextField label="GBq" value={gbq} disabled></TextField> 
+      <TextField label="TBq" value={tbq} disabled></TextField> 
+    </div>
+    )
   }
 
 export default Conversion;

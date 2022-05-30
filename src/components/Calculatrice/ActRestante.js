@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import { TextField } from "@mui/material";
+import { Input } from "@mui/material";
 import ChoixRadio from "../ComboBox";
 import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
@@ -34,16 +37,11 @@ function ActiviteRestante() {
     return <div className="activite-restante">
         <Navigation />
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
-        <h2>Activité initial :</h2>
-        <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
-        <h2>Période({unite}):</h2>
-        <input type="texte" value={periode} onChange={(e) => setPeriode(e.target.value)}></input>
-        <h2> Temps écoulé :</h2>
-        <input type="texte" onChange={(e) => setTmps(e.target.value)}></input>
-        <h2> Activité restante :</h2>
-        <input type="texte" value={actRes} readOnly disabled></input>
-        <button onClick={() => CalculAct()}>Validez</button>
-
+        <TextField label="Activite initial" onChange={(e) => setActIni(e.target.value)}></TextField>
+        <TextField  label={"Periode"+" ("+unite+")"} value={periode} onChange={(e) => setPeriode(e.target.value)} ></TextField>
+        <TextField label="Temps écoulé" onChange={(e) => setTmps(e.target.value)}></TextField>
+        <TextField label="Activité restante" value={actRes} readOnly disabled></TextField>
+        <Button variant="contained" onClick={() => CalculAct()}>Validez </Button>
     </div>
 }
 

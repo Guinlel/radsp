@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Card, CardContent, Typography,Box } from "@mui/material";
 import ChoixRadio from "./ComboBox";
 import Navigation from "./Navigation";
 import radionucleides from "../ressources/Radio.json";
@@ -16,15 +17,24 @@ function Home() {
         if(!name){
             return <p></p>
         }else{
-            return <ul>
+            return (
+            <ul>
             <p>Nom :</p><li>{name}</li>
             <p>Période :</p><li>{periode} {unite}</li>
             <p>Principales émissions : </p><li>{emissionPrinc}, {emissionSecond}</li>
             <p>Energies relachés :</p> <li>{energie}</li>
-
-        </ul>
+            </ul>
+            )
         };
     }
+
+    const card = (
+        <React.Fragment>
+            <CardContent>
+                <Typography sx={{fontSize: 14}} color="text.seconday">{name}</Typography>             
+            </CardContent>
+        </React.Fragment>
+    )
 
     const HandleChange = (e) => {
         // Initialise la liste avec les données correspondant aux choix du select 

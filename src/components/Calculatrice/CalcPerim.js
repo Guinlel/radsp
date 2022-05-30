@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
+import { Button, TextField } from "@mui/material";
 
 function CalculPerim() {
     // Création des hooks nécessaires
@@ -16,18 +17,16 @@ function CalculPerim() {
         setPerimetre((Math.sqrt((doseDep * Math.pow(distanceDep, 2)) / doseVoulu)))
     }
 
-    return <div className="info-calcul-perim">
+    return (
+    <div className="info-calcul-perim">
         <Navigation />
-        <h2> Dose de départ</h2>
-        <input type="texte" id="doseDepart" onChange={(e) => setDoseDep(e.target.value)}></input>
-        <h2>Distance de départ</h2>
-        <input type="texte" onChange={(e) => setDistanceDep(e.target.value)}></input>
-        <h2>Dose voulu </h2>
-        <input type="texte" onChange={(e) => setDoseVoulu(e.target.value)}></input>
-        <h2>Périmètre recherché</h2>
-        <input type="texte" value={perimetre} readOnly disabled></input>
-        <button onClick={() => CalculPerim()}>Validez !</button>
+        <TextField label="Dose de Départ" onChange={(e) => setDoseDep(e.target.value)}></TextField>
+        <TextField label="Distance de départ" onChange={(e) => setDistanceDep(e.target.value)}></TextField>
+        <TextField label="Dose voulu" onChange={(e) => setDoseVoulu(e.target.value)}></TextField>
+        <TextField label="Périmètre recherché" value={perimetre} readOnly disabled></TextField>
+        <Button variant="contained"onClick={() => CalculPerim()}>Validez !</Button>
     </div>
+    )
 }
 
 export default CalculPerim;
