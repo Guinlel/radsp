@@ -1,11 +1,13 @@
 .navigation{
+    display: flex ;
+    flex-direction: column;
     text-align: center;
     margin: 10px;
     padding: 10px;
     font-style: normal;
 }
 .link{
-    color: brown;
+    color: black;
     font-style: italic;
     text-align: center;
     margin: 2px;
@@ -13,6 +15,6 @@
     display: inline;
 }
 .link:hover{
-    color:black;
+    color:rgb(204, 28, 28);
     text-decoration: underline solid ;
 }

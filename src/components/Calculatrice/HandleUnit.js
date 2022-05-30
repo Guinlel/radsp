@@ -12,7 +12,7 @@ function HandleUnite(props){
         //     <option value="nSv">nSv</option>
         // </select>
         // </div>
-        <Box>
+        <Box sx={{maxWidth: 20 , display: 'asolute'}}>
             <FormControl>
                 <InputLabel>Unité</InputLabel>
                 <Select autoWidth label="Unité" 

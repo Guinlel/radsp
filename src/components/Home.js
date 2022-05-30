@@ -18,20 +18,22 @@ function Home() {
             return <p></p>
         }else{
             return (
-            <ul>
-            <p>Nom :</p><li>{name}</li>
-            <p>Période :</p><li>{periode} {unite}</li>
-            <p>Principales émissions : </p><li>{emissionPrinc}, {emissionSecond}</li>
-            <p>Energies relachés :</p> <li>{energie}</li>
-            </ul>
+            <Box sx={{ minWidth : 275}}>
+                <Card >{card}</Card>
+            </Box>
             )
         };
     }
 
     const card = (
         <React.Fragment>
-            <CardContent>
-                <Typography sx={{fontSize: 14}} color="text.seconday">{name}</Typography>             
+            <CardContent id="card-radio-info">
+                <Typography sx={{fontSize: 16}} color="text.seconday">{name}</Typography>
+                <Typography sx={{fontSize: 12}} color="text.seconday">Periode : {periode} {unite} </Typography>
+                <Typography sx={{fontSize: 14}} variant="h5" color="text.seconday">Principale émissions : </Typography>   
+                <Typography sx={{fontSize: 12}} color="text.seconday">{emissionPrinc}, {emissionSecond}</Typography> 
+                <Typography sx={{fontSize: 14}} variant="h5" color="text.seconday">Energies relachés : </Typography>
+                <Typography sx={{fontSize: 12}} color="text.seconday">{energie}</Typography>    
             </CardContent>
         </React.Fragment>
     )
@@ -52,7 +54,6 @@ function Home() {
         )
     }
     return <div className="home">
-        <Navigation />
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
         <RenderInfo/>

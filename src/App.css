@@ -28,7 +28,33 @@
   color: #61dafb;
 }
 
-.leaflet-container{
-  width:50vh;
-  height: 50vh;
+.activite-restante{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+  transform: translate(-40%);
+}
+
+.render-conversion{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 50%;
+  transform: translate(-40%);
+}
+
+.info-calcul-dose{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 50%;
+  transform: translate(-40%);
+}
+
+.info-calcul-perim{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 50%;
+  transform: translate(-40%);
 }

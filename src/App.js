@@ -9,11 +9,13 @@ import CalculDose from './components/Calculatrice/CalcDose';
 import CalculPerim from './components/Calculatrice/CalcPerim';
 import ActiviteRestante from './components/Calculatrice/ActRestante';
 import Meteo from './components/Maps/Meteo';
+import MenuBurger from './components/MenuBurger';
 
 function App() {
     
     const element = (
         <BrowserRouter>
+        <MenuBurger/>
             <Routes>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/conversion" element={<Conversion/>} />

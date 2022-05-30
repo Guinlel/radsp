@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import MenuBurger from "../MenuBurger";
 import Navigation from "../Navigation";
 
 function Meteo(props) {
@@ -99,7 +100,6 @@ function Meteo(props) {
 
     return (
         <div>
-            <Navigation/>
             <p>{place}</p>
             <VentNul/>
             <RafaleNul/>  

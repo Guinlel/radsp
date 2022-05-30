@@ -1,8 +1,5 @@
 import React,{useState} from 'react';
 import {TextField} from'@mui/material';
-import Navigation from '../Navigation';
-import './Conversion.css';
-
 
 function Conversion (value){    
     // Création des variables nécessaire à la conversion en partant d'un CI
@@ -29,13 +26,12 @@ function Conversion (value){
     }
     return (
     <div className="render-conversion">    
-    <Navigation/>  
-      <TextField label="CI" onChange={e => Conversion(e.target.value)}></TextField>
-      <TextField label="Bq" value={bq} disabled></TextField> 
-      <TextField label="KBq" value={kbq} disabled></TextField>
-      <TextField label="MBq" value={mbq} disabled></TextField>
-      <TextField label="GBq" value={gbq} disabled></TextField> 
-      <TextField label="TBq" value={tbq} disabled></TextField> 
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="CI" onChange={e => Conversion(e.target.value)}></TextField>
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="Bq" value={bq} disabled></TextField> 
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="KBq" value={kbq} disabled></TextField>
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="MBq" value={mbq} disabled></TextField>
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="GBq" value={gbq} disabled></TextField> 
+      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="TBq" value={tbq} disabled></TextField> 
     </div>
     )
   }

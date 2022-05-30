@@ -18,7 +18,7 @@ function ChoixRadio(props){
         //     <option>Veuillez Choisir un Element</option>
         //     {optionRadio}
         // </select>
-        <Box sx={{minWidth : 300}}>
+        <Box sx={{maxWidth : 300, marginTop: 4}}>
             <FormControl>
             <InputLabel>Element</InputLabel>
             <Select autoWidth label="Element" onChange={(e)=> props.changeHandler(e.target.value)}>
