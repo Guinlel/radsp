@@ -10,7 +10,7 @@ function ActiviteRestante() {
     const [periode, setPeriode] = useState(0);
     const [tmps, setTmps] = useState(0);
     const [actRes, setActRes] = useState(0);
-    const [unite, setUnite] = useState("");
+    const [unite, setUnite] = useState('');
     const radionucleide = radionucleides;
 
     function CalculAct() {
@@ -35,9 +35,9 @@ function ActiviteRestante() {
     return <div className="activite-restante">
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
         <TextField sx={{marginTop: 1 ,maxWidth: 300}} label="Activite initial" onChange={(e) => setActIni(e.target.value)}></TextField>
-        <TextField sx={{marginTop: 1, maxWidth: 300}} label={"Periode"+" ("+unite+")"} value={periode} onChange={(e) => setPeriode(e.target.value)} ></TextField>
+        <TextField sx={{marginTop: 1, maxWidth: 300}} label={"Periode"+" ("+unite+")"} value={periode} controlled="true" onChange={(e) => setPeriode(e.target.value)} controlled></TextField>
         <TextField sx={{marginTop: 1, maxWidth: 300}} label="Temps écoulé" onChange={(e) => setTmps(e.target.value)}></TextField>
-        <TextField sx={{marginTop: 1, maxWidth: 300}} label="Activité restante" value={actRes} readOnly disabled></TextField>
+        <TextField sx={{marginTop: 1, maxWidth: 300}} label="Activité restante" value={actRes || ''} readOnly disabled></TextField>
         <Button sx={{marginTop: 1, maxWidth: 100}} variant="contained" onClick={() => CalculAct()}>Validez </Button>
     </div>
 }
