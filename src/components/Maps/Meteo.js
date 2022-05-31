@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import MenuBurger from "../MenuBurger";
-import Navigation from "../Navigation";
+import {Typography, Card , CardContent, Box } from '@mui/material';
 
 function Meteo(props) {
     const [lat, setLatitude] = useState(null);
@@ -25,21 +24,26 @@ function Meteo(props) {
         switchDirection();
     })
 
+
+
     const RafaleNul = ()=>{
         if (!raf ){
-            return <p>Aucune informations sur les rafales de vents disponible</p> ;
+            return  <Typography sx={{fontSize: 14}}>Aucune informations sur les rafales de vents disponible </Typography>  ;
         } else {
-            return <p>Rafale: {rafale} km/h</p>;
+            return <Typography sx={{fontSize: 12}}>Rafale: {rafale} km/h</Typography> ;
         }
     }
 
     const VentNul = ()=>{
         if (!speed){
-            return <p> Aucune informations disponible </p>
+            return <Typography sx={{fontSize:14}}> Aucune informations disponible</Typography>
         } else{
-            return <div> <p>Vitesse du vent :{speed * 3.6} km/h</p> 
-                         <p>Orientation du vent: {deg}° {direction}</p> 
-                    </div>
+            return (
+                    <React.Fragment>
+                        <Typography sx={{fontSize : 12}}> Vitesse du vent :{speed * 3.6} km/h </Typography>     
+                        <Typography sx={{fontSize : 12}}> Orientation du vent: {deg}° {direction}</Typography> 
+                    </React.Fragment>
+            )                       
         }
     }
     const switchDirection = () => {
@@ -99,11 +103,15 @@ function Meteo(props) {
 
 
     return (
-        <div>
-            <p>{place}</p>
-            <VentNul/>
-            <RafaleNul/>  
-        </div>
+        <Box sx={{width :  '35%' , marginTop : 2 }}>
+            <Card>
+                <CardContent>
+                    <Typography sx={{fontSize : 16}}>{place}</Typography>
+                    <VentNul/>
+                    <RafaleNul/>  
+                </CardContent>
+            </Card>
+        </Box>      
     )
 }
 
