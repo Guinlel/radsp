@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import ChoixRadio from "../ComboBox";
 import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
+import MenuBurger from "../MenuBurger";
 
 
 function ActiviteRestante() {
     const [actIni, setActIni] = useState(0);
-    const [periode, setPeriode] = useState(0);
+    const [periode, setPeriode] = useState('');
     const [tmps, setTmps] = useState(0);
-    const [actRes, setActRes] = useState(0);
+    const [actRes, setActRes] = useState('');
     const [unite, setUnite] = useState("");
     const radionucleide = radionucleides;
 
@@ -34,16 +35,25 @@ function ActiviteRestante() {
     return <div className="activite-restante">
         <Navigation />
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
-        <h2>Activité initial :</h2>
-        <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
-        <h2>Période({unite}):</h2>
-        <input type="texte" value={periode} onChange={(e) => setPeriode(e.target.value)}></input>
-        <h2> Temps écoulé :</h2>
-        <input type="texte" onChange={(e) => setTmps(e.target.value)}></input>
-        <h2> Activité restante :</h2>
-        <input type="texte" value={actRes} readOnly disabled></input>
-        <button onClick={() => CalculAct()}>Validez</button>
-
+        <div className="activite-content">
+            <label className="field-input">
+                <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
+                <span className="placeholder">Activite Initial</span>
+            </label>
+            <label className="field-input">
+                <input type="texte" value={periode + ' ' + unite} onChange={(e) => setPeriode(e.target.value)}></input>
+                <span className="placeholder">Periode</span>
+            </label>
+            <label className="field-input">
+                <input type="texte" onChange={(e) => setTmps(e.target.value)}></input>
+                <span className="placeholder">Temps écoulé</span>
+            </label>
+            <label className="field-input">
+                <input type="texte" value={actRes} disabled readOnly ></input>
+                <span>Activité restante</span>
+            </label>       
+        </div>
+        <button className="button-valide" onClick={() => CalculAct()}>Validez</button>
     </div>
 }
 

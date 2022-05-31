@@ -23,26 +23,26 @@ self.addEventListener("install",(event)=>{
 });
 
 // SW Respond
-// self.addEventListener("fetch", event => {
-//     console.log(`Request of ${event.request.url}`);
+self.addEventListener("fetch", event => {
+    console.log(`Request of ${event.request.url}`);
   
-//     // comportement par défaut: requête le réseau
-//     event.respondWith(fetch(event.request));
-//   });
+    // comportement par défaut: requête le réseau
+    event.respondWith(fetch(event.request));
+  });
 
-self.addEventListener("fetch",(event)=>{
-    event.respondWith(
-        caches.match(event.request).
-        catch(()=>{ return fetch(event.request)
-        .then(()=>{
-            return cache.open(CACHE_NAME).then(()=>{
-                caches.put(event.request, response.clone());
-                return response;
-            })
-        })
-        })
-    )
-});
+// self.addEventListener("fetch",(event)=>{
+//     event.respondWith(
+//         caches.match(event.request).
+//         catch(()=>{ return fetch(event.request)
+//         .then(()=>{
+//             return cache.open(CACHE_NAME).then(()=>{
+//                 caches.put(event.request, response.clone());
+//                 return response;
+//             })
+//         })
+//         })
+//     )
+// });
 
 // SW activate
 self.addEventListener("activate",(event)=>{

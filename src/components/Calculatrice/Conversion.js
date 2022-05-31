@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Navigation from '../Navigation';
-import './Conversion.css';
 
 
 function Conversion (value){    

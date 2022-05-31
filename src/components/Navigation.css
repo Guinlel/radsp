@@ -5,14 +5,65 @@
     font-style: normal;
 }
 .link{
-    color: brown;
-    font-style: italic;
+    text-decoration: none;
+    color: #95a5a6;
+    background-color:#34495e ;
     text-align: center;
-    margin: 2px;
-    padding: 2px;
-    display: inline;
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid #34495e;
+    border-radius: 10px;
+    margin-top: 2em;
+    font-style: oblique;
 }
-.link:hover{
-    color:black;
-    text-decoration: underline solid ;
-}
+
+.navigation{
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 160px;
+    text-align: start;
+    margin: 5% 20px 0% 5px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .navigation-visible{
+    z-index: 2;
+    background-color: #fdcb6e;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    text-align: start;
+    animation: slidemenu 0.5s ;
+    visibility:visible ;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4em;
+    transition: 0.5s;
+  }
+  
+  @keyframes slidemenu{
+    from{
+        height: 100%;
+        width: 0%;
+    }
+    to{
+        height: 100%;
+        width:80%;
+    }
+  }
+
+  .menu-burger{
+    position: absolute;
+    right: 3%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid;
+    top: 3%;
+    background-color: #ffeaa7;
+    font-size: 15px;
+    font-style: normal;
+
+  }
