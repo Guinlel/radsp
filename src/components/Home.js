@@ -10,7 +10,7 @@ function Home() {
     const [energie, setEnergie] = useState(null);
     const [emissionPrinc, setEmissionPrinc] = useState(null);
     const [emissionSecond, setEmissionSec] = useState(null);
-    const [isActive , setActive] = useState('true');
+    const [isActive , setActive] = useState('false');
     const radionucleide = radionucleides;
 
     const RenderInfo = () => {
@@ -51,10 +51,9 @@ function Home() {
         <Navigation />
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
-        <div id="card-rad" className={isActive ? 'card-rad' : 'card-rad-hidden'}>         
+        <div id="card-rad" className={isActive ? 'card-rad-hidden' : null} >         
             <RenderInfo />
         </div>
-
     </div>
     )
 }

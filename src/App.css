@@ -36,7 +36,7 @@ body{
   border-radius: 10px;
   outline: none;
   padding: 0 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
 }
 
@@ -63,7 +63,7 @@ body{
 .activite-content{
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
+  margin-left: 3em;
 }
 
 .choix-radio{
@@ -76,12 +76,13 @@ body{
 }
 
 .button-valide{
+  width: 6em;
   margin-top: 10px;
   border: 2px solid;
   padding: 5px;
   border-radius: 5px;
   color: #95a5a6;
-  margin-left: 35%;
+  margin-left: 5em;
   transform: translate(-50%);
 }
 
@@ -106,8 +107,15 @@ body{
 
 /* Home */
 
-.card-rad{
-  visibility: visible;
+#card-rad{
+  display: none;
+  
+}
+
+#card-rad.card-rad-hidden{
+  display: block;
+  height: 0%;
+  border: 0px;
   border: 1px solid #fd6a37;
   background-color: #fd6a37;
   border-radius: 5px;
@@ -117,13 +125,44 @@ body{
   padding: 1em;
 }
 
-.card-rad-hidden{
-  visibility: hidden;
-  height: 0%;
-  border: 0px;
-}
-
 .card-title{
   font-style: italic;
   font-size: 20px;
+}
+
+.none{
+  display: none;
+}
+
+/* Conversion */
+
+.render-conversion{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  margin-top: 5em;
+}
+
+/* Calcul de Dose  */
+
+.card-calc-dose {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  margin-top: 5em;
+}
+
+.unite-select{
+  margin-top: 1em;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+/* Calcul Perim */
+
+.card-calcul-perim{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  margin-top: 7em;
 }
