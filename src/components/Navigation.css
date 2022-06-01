@@ -31,6 +31,7 @@
   
   .navigation-visible{
     z-index: 2;
+    top:0%;
     background-color: #fdcb6e;
     position: absolute;
     height: 100%;

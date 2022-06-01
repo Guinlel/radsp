@@ -69,7 +69,7 @@ body{
 .choix-radio{
  width: auto;
  height: auto;
- margin: 30% 10px 10px 5%;
+ margin: 5em 10px 10px 2em;
  padding: 8px;
  border-radius: 10px;
  border: 2px solid #fad390;
@@ -85,4 +85,45 @@ body{
   transform: translate(-50%);
 }
 
+/* Meteo */
 
+.card-meteo{
+  border: 1px solid #fd6a37;;
+  background-color: #fd6a37;
+  color: #e2e2e2 ;
+  border-radius: 4px;
+  margin: 5em 3em 2em 3em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.meteo-place{
+  font-style: oblique;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+/* Home */
+
+.card-rad{
+  visibility: visible;
+  border: 1px solid #fd6a37;
+  background-color: #fd6a37;
+  border-radius: 5px;
+  justify-content: center;
+  color: #e2e2e2 ;
+  margin: 2em;
+  padding: 1em;
+}
+
+.card-rad-hidden{
+  visibility: hidden;
+  height: 0%;
+  border: 0px;
+}
+
+.card-title{
+  font-style: italic;
+  font-size: 20px;
+}

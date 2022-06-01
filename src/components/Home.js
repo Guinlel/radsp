@@ -10,25 +10,30 @@ function Home() {
     const [energie, setEnergie] = useState(null);
     const [emissionPrinc, setEmissionPrinc] = useState(null);
     const [emissionSecond, setEmissionSec] = useState(null);
+    const [isActive , setActive] = useState('true');
     const radionucleide = radionucleides;
 
-    const RenderInfo =  ()=>{
-        if(!name){
-            return <p></p>
-        }else{
-            return <ul>
-            <p>Nom :</p><li>{name}</li>
-            <p>Période :</p><li>{periode} {unite}</li>
-            <p>Principales émissions : </p><li>{emissionPrinc}, {emissionSecond}</li>
-            <p>Energies relachés :</p> <li>{energie}</li>
-
-        </ul>
+    const RenderInfo = () => {
+        if (!name) {
+            return <p>Selectioner une Element</p>
+        } else {
+            return(
+            <div>
+                <p className="card-title">{name}</p>
+                <p>Periode : {periode + ' ' + unite }</p>
+                <p className="card-title">Principales émissions : </p>
+                <p> {emissionPrinc + ',' + emissionSecond}</p>
+                <p className="card-title">Energies relachés :</p>
+                <p>{energie}</p>
+            </div>
+            )
         };
     }
 
     const HandleChange = (e) => {
         // Initialise la liste avec les données correspondant aux choix du select 
         var id = e;
+        setActive(!isActive);
         radionucleide.map((radio) => {
             if (id == radio.id) {
                 setPeriode(radio.periode);
@@ -41,12 +46,17 @@ function Home() {
         }
         )
     }
-    return <div className="home">
+    return (
+    <div className="home">
         <Navigation />
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
-        <RenderInfo/>
+        <div id="card-rad" className={isActive ? 'card-rad' : 'card-rad-hidden'}>         
+            <RenderInfo />
+        </div>
+
     </div>
+    )
 }
 
 export default Home;

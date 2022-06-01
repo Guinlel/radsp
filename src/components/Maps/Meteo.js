@@ -36,7 +36,7 @@ function Meteo(props) {
         if (!speed){
             return <p> Aucune informations disponible </p>
         } else{
-            return <div> <p>Vitesse du vent :{speed * 3.6} km/h</p> 
+            return <div className="wind-info"> <p>Vitesse du vent :{speed * 3.6} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 
                     </div>
         }
@@ -100,11 +100,14 @@ function Meteo(props) {
     return (
         <div>
             <Navigation/>
-            <p>{place}</p>
+            <div className="card-meteo">         
+            <p className="meteo-place">{place}</p>
             <VentNul/>
             <RafaleNul/>  
+            </div>
         </div>
+        
     )
-}
+    }
 
 export default Meteo;
