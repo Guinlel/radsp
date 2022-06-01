@@ -40,14 +40,17 @@ function ActiviteRestante() {
                 <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
                 <span className="placeholder">Activite Initial</span>
             </label>
+            
             <label className="field-input">
                 <input type="texte" value={periode + ' ' + unite} onChange={(e) => setPeriode(e.target.value)}></input>
                 <span className="placeholder">Periode</span>
             </label>
+
             <label className="field-input">
                 <input type="texte" onChange={(e) => setTmps(e.target.value)}></input>
                 <span className="placeholder">Temps écoulé</span>
             </label>
+
             <label className="field-input">
                 <input type="texte" value={actRes} disabled readOnly ></input>
                 <span>Activité restante</span>
