@@ -83,11 +83,10 @@
     position: absolute;
     right: 3%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0.75rem;
     border: 2px solid;
     top: 3%;
     background-color: #ffeaa7;
-    font-size: 15px;
-    font-style: normal;
-
+    font-size: 1rem;
+    font-style: oblique;
   }

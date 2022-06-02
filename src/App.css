@@ -12,14 +12,6 @@
 body{
   background-color: #ffeaa7;
 }
-.App-link {
-  color: #61dafb;
-}
-
-.leaflet-container{
-  width:50vh;
-  height: 50vh;
-}
 
 /* Style Input */
 .field-input{
@@ -103,7 +95,7 @@ body{
   background-color: #fd6a37;
   color: #e2e2e2 ;
   border-radius: 4px;
-  margin: 5em 3em 2em 3em;
+  margin: 25% 3em 2em 3em;
   padding: 1em;
   font-style: italic;
   font-size: 14px;
@@ -153,8 +145,8 @@ body{
 .render-conversion{
   display: flex;
   flex-direction: column;
-  margin-left: 3em;
-  margin-top: 5em;
+  margin-left: 2em;
+  margin-top: 10%;
 }
 
 /* Calcul de Dose  */

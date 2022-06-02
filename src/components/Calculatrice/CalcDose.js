@@ -6,7 +6,7 @@ import HandleUnite from "./HandleUnit";
 
 function CalculDose() {
     //Création des hooks
-    const [doseRech, setDoseRech] = useState(0);
+    const [doseRech, setDoseRech] = useState('');
     const [doseMes, setDoseM] = useState(0);
     const [distanceMes, setDistMes] = useState(0);
     const [distanceInc, setDistanceInc] = useState(0);
