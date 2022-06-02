@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {Typography, Card , CardContent, Box } from '@mui/material';
 
 function Meteo(props) {
     const [lat, setLatitude] = useState(null);
@@ -50,18 +49,9 @@ function Meteo(props) {
         if (!speed){
             return <Typography sx={{fontSize:14}}> Aucune informations disponible</Typography>
         } else{
-<<<<<<< HEAD
-            return (
-                    <React.Fragment>
-                        <Typography sx={{fontSize : 12}}> Vitesse du vent :{speed * 3.6} km/h </Typography>     
-                        <Typography sx={{fontSize : 12}}> Orientation du vent: {deg}° {direction}</Typography> 
-                    </React.Fragment>
-            )                       
-=======
             return <div className="wind-info"> <p>Vitesse du vent :{vitesse} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 
                     </div>
->>>>>>> test-branch
         }
     }
     const switchDirection = () => {
@@ -122,17 +112,6 @@ function Meteo(props) {
 
 
     return (
-<<<<<<< HEAD
-        <Box sx={{width :  '35%' , marginTop : 2 }}>
-            <Card>
-                <CardContent>
-                    <Typography sx={{fontSize : 16}}>{place}</Typography>
-                    <VentNul/>
-                    <RafaleNul/>  
-                </CardContent>
-            </Card>
-        </Box>      
-=======
         <div>
             <Navigation/>
             <div className="card-meteo">         
@@ -143,7 +122,6 @@ function Meteo(props) {
             </div>
         </div>
         
->>>>>>> test-branch
     )
     }
 
