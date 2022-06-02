@@ -1,11 +1,5 @@
-import { Button, TextField } from "@mui/material";
 import React from "react";
-<<<<<<< HEAD
-import {useState} from "react";
-import MenuBurger from "../MenuBurger";
-=======
 import { useState } from "react";
->>>>>>> test-branch
 import Navigation from "../Navigation";
 import HandleUnite from "./HandleUnit";
 
@@ -28,16 +22,6 @@ function CalculDose() {
         SetUnite(props);
     }
 
-<<<<<<< HEAD
-    return(
-        <div className="info-calcul-dose">  
-            <TextField sx={{maxWidth: 300, marginTop: 1}} label="Dose mesuré" onChange={(e)=> setDoseM(e.target.value)}></TextField>
-            <HandleUnite HandleChange={HandleChangeUnite}/>
-            <TextField sx={{maxWidth: 300, marginTop: 1}} label="Distance dose mesuré (m)" onChange={(e)=> setDistanceInc(e.target.value) }></TextField>
-            <TextField sx={{maxWidth: 300, marginTop: 1}}  label="Distance dose recherché (m)" onChange={(e)=> setDistMes(e.target.value)}></TextField>
-            <TextField sx={{maxWidth: 300, marginTop: 1}}  label="Dose recherché" value={doseRech +" "+ unite } readOnly disabled></TextField>
-            <Button sx={{maxWidth: 100, marginTop: 1 , marginLeft: 11}}  variant="contained" onClick={()=>Calcul()}>Validez ! </Button>
-=======
     return (
         <div className="container">
             <Navigation />
@@ -67,7 +51,6 @@ function CalculDose() {
 
                 <button className="button-valide" onClick={() => Calcul()} >Validez ! </button>
             </div>
->>>>>>> test-branch
         </div>
     )
 }

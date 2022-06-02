@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React,{useState} from 'react';
-import {TextField} from'@mui/material';
-=======
 import React, { useState } from 'react';
 import Navigation from '../Navigation';
 
->>>>>>> test-branch
 
 function Conversion(value) {
   // Création des variables nécessaire à la conversion en partant d'un CI
@@ -21,27 +16,6 @@ function Conversion(value) {
   const [gbq, setGBq] = useState(0);
   const [tbq, setTBq] = useState(0);
 
-<<<<<<< HEAD
-    function Conversion(value){
-      // Conversion du Curie en l'unité souhaité afin qu'elle soit affecté 
-      // On utilise donc les setteurs des Hooks pour qu'on puisse récuperer les valeurs et les exploiters
-      setBq(value*convBq);
-      setKBq(value * convKBq);
-      setMBq(value*convMBq);
-      setGBq(value*convGBq);
-      setTBq(value*convTBq);
-    }
-    return (
-    <div className="render-conversion">    
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="CI" onChange={e => Conversion(e.target.value)}></TextField>
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="Bq" value={bq} disabled></TextField> 
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="KBq" value={kbq} disabled></TextField>
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="MBq" value={mbq} disabled></TextField>
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="GBq" value={gbq} disabled></TextField> 
-      <TextField sx={{maxWidth: 300 , marginTop: 1}} label="TBq" value={tbq} disabled></TextField> 
-    </div>
-    )
-=======
   function Conversion(value) {
     // Conversion du Curie en l'unité souhaité afin qu'elle soit affecté 
     // On utilise donc les setteurs des Hooks pour qu'on puisse récuperer les valeurs et les exploiters
@@ -50,7 +24,6 @@ function Conversion(value) {
     setMBq(value * convMBq);
     setGBq(value * convGBq);
     setTBq(value * convTBq);
->>>>>>> test-branch
   }
   return (
     <div className='container'>

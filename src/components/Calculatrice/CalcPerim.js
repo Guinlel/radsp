@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
-import { Button, TextField } from "@mui/material";
-import MenuBurger from "../MenuBurger";
 
 function CalculPerim() {
     // Création des hooks nécessaires
@@ -19,15 +17,6 @@ function CalculPerim() {
     }
 
     return (
-<<<<<<< HEAD
-    <div className="info-calcul-perim">
-        <TextField sx={{maxWidth: 300 , marginTop: 1}} label="Dose de Départ" onChange={(e) => setDoseDep(e.target.value)}></TextField>
-        <TextField sx={{maxWidth: 300 , marginTop: 1}}  label="Distance de départ" onChange={(e) => setDistanceDep(e.target.value)}></TextField>
-        <TextField sx={{maxWidth: 300 , marginTop: 1}}  label="Dose voulu" onChange={(e) => setDoseVoulu(e.target.value)}></TextField>
-        <TextField sx={{maxWidth: 300 , marginTop: 1}}  label="Périmètre recherché" value={perimetre} readOnly disabled></TextField>
-        <Button sx={{maxWidth: 100 , marginTop:2 , marginLeft: 11}} variant="contained"onClick={() => CalculPerim()}>Validez !</Button>
-    </div>
-=======
         <div className="container">
             <Navigation />
             <div className="card-calcul-perim">
@@ -53,10 +42,8 @@ function CalculPerim() {
 
                 <button className="button-valide" onClick={() => CalculPerim()}>Validez !</button>
             </div>
-
         </div>
 
->>>>>>> test-branch
     )
 }
 
