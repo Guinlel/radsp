@@ -21,22 +21,22 @@ function CalculPerim() {
             <Navigation />
             <div className="card-calcul-perim">
                 <label className="field-input">
-                    <input type="texte" id="doseDepart" onChange={(e) => setDoseDep(e.target.value)}></input>
+                    <input type="number" id="doseDepart" onChange={(e) => setDoseDep(e.target.value)}></input>
                     <span className="placeholder">Dose de départ</span>
                 </label>
 
                 <label className="field-input">
-                    <input type="texte" onChange={(e) => setDistanceDep(e.target.value)}></input>
+                    <input type="number" onChange={(e) => setDistanceDep(e.target.value)}></input>
                     <span className="placeholder">Distance de départ</span>
                 </label>
 
                 <label className="field-input">
-                    <input type="texte" onChange={(e) => setDoseVoulu(e.target.value)}></input>
+                    <input type="number" onChange={(e) => setDoseVoulu(e.target.value)}></input>
                     <span className="placeholder">Dose voulu</span>
                 </label>
 
                 <label className="field-input">
-                    <input type="texte" value={perimetre} readOnly disabled></input>
+                    <input type="number" value={perimetre} readOnly disabled></input>
                     <span className="placeholder">Périmètre recherché</span>
                 </label>
 

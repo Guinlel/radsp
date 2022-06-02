@@ -31,32 +31,32 @@ function Conversion(value) {
       <div className="render-conversion">
         
         <label className="field-input" >
-          <input type="text" onChange={e => Conversion(e.target.value)}></input>
+          <input type="number" onChange={e => Conversion(e.target.value)}></input>
           <span className='placeholde'>Valeur Ci</span>
 
         </label>
         <label className='field-input'>
-          <input type="text" value={bq} disabled></input>
+          <input type="number" value={bq} disabled></input>
           <span className='placeholder'> Valeur Bq</span>
         </label>
 
         <label className='field-input'>
-          <input type="text" value={kbq} disabled></input>
+          <input type="number" value={kbq} disabled></input>
           <span className='placeholder'>Valeur KBq</span>
         </label>
 
         <label className='field-input'>
-          <input type="text" value={mbq} disabled></input>
+          <input type="number" value={mbq} disabled></input>
           <span className='placeholder'>Valeur MBq</span>
         </label>
 
         <label className='field-input'>
-          <input type="text" value={gbq} disabled></input>
+          <input type="number" value={gbq} disabled></input>
           <span className='placeholder'>GBq</span>
         </label>
 
         <label className='field-input'>
-          <input type="text" value={tbq} disabled></input>
+          <input type="number" value={tbq} disabled></input>
           <span className='placeholder'>Valeur TBq</span>
         </label>
       </div>

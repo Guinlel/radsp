@@ -37,7 +37,7 @@ function ActiviteRestante() {
         <div className="activite-content">
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
             <label className="field-input">
-                <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
+                <input type="number" onChange={(e) => setActIni(e.target.value)}></input>
                 <span className="placeholder">Activite Initial</span>
             </label>
             
@@ -47,12 +47,12 @@ function ActiviteRestante() {
             </label>
 
             <label className="field-input">
-                <input type="texte" onChange={(e) => setTmps(e.target.value)}></input>
+                <input type="number" onChange={(e) => setTmps(e.target.value)}></input>
                 <span className="placeholder">Temps écoulé</span>
             </label>
 
             <label className="field-input">
-                <input type="texte" value={actRes} disabled readOnly ></input>
+                <input type="number" value={actRes} disabled readOnly ></input>
                 <span>Activité restante</span>
             </label>
 
