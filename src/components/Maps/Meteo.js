@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Navigation from "../Navigation";
 
 function Meteo(props) {
     const [lat, setLatitude] = useState(null);
@@ -28,11 +27,13 @@ function Meteo(props) {
         switchDirection();
     })
 
+
+
     const RafaleNul = ()=>{
         if (!raf ){
-            return <p>Aucune informations sur les rafales de vents disponible</p> ;
+            return  <Typography sx={{fontSize: 14}}>Aucune informations sur les rafales de vents disponible </Typography>  ;
         } else {
-            return <p>Rafale: {rafale} km/h</p>;
+            return <Typography sx={{fontSize: 12}}>Rafale: {rafale} km/h</Typography> ;
         }
     }
 
@@ -46,7 +47,7 @@ function Meteo(props) {
 
     const VentNul = ()=>{
         if (!speed){
-            return <p> Aucune informations disponible </p>
+            return <Typography sx={{fontSize:14}}> Aucune informations disponible</Typography>
         } else{
             return <div className="wind-info"> <p>Vitesse du vent :{vitesse} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 

@@ -1,13 +1,20 @@
 .navigation{
+    display: flex ;
+    flex-direction: column;
     text-align: center;
     margin: 10px;
     padding: 10px;
     font-style: normal;
 }
 .link{
+<<<<<<< HEAD
+    color: black;
+    font-style: italic;
+=======
     text-decoration: none;
     color: #95a5a6;
     background-color:#34495e ;
+>>>>>>> test-branch
     text-align: center;
     margin: 15px;
     padding: 0.5rem;
@@ -16,9 +23,15 @@
     margin-top: 2em;
     font-style: oblique;
 }
+<<<<<<< HEAD
+.link:hover{
+    color:rgb(204, 28, 28);
+    text-decoration: underline solid ;
+=======
 
 .navigation-close{
   display: none;
+>>>>>>> test-branch
 }
 
 .navigation{

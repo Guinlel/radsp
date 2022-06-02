@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ChoixRadio from "../ComboBox";
-import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
-import MenuBurger from "../MenuBurger";
 
 
 function ActiviteRestante() {

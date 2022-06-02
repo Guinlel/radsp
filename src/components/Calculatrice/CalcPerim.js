@@ -42,7 +42,6 @@ function CalculPerim() {
 
                 <button className="button-valide" onClick={() => CalculPerim()}>Validez !</button>
             </div>
-
         </div>
 
     )

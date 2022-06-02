@@ -54,4 +54,4 @@ function CalculDose() {
         </div>
     )
 }
-export default CalculDose;
+export default CalculDose; 
