@@ -3,7 +3,7 @@ import React from "react";
 function HandleUnite(props){
     return (
         <div>
-            <select className="unite-select" onTouchStart={(e)=> props.HandleChange(e.target.value)} >
+            <select className="unite-select" onChange={(e)=> props.HandleChange(e.target.value)} >
             <option value="">Veuillez Choisir une unité</option>
             <option value="Sv">Sv</option>
             <option value="mSv">mSv</option>

@@ -9,7 +9,7 @@ function ChoixRadio(props){
     </option>);
 
     return(
-        <select  className="choix-radio" onFocus={props.changeActive} onTouchStart={(e)=> props.changeHandler(e.target.value)}>
+        <select  className="choix-radio" onFocus={props.changeActive} onChange={(e)=> props.changeHandler(e.target.value)}>
             <option value="">Veuillez choisir un élément</option>
             {optionRadio}
         </select>
