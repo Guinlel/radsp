@@ -27,17 +27,17 @@ function CalculPerim() {
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDistanceDep(e.target.value)}></input>
-                    <span className="placeholder">Distance de départ</span>
+                    <span className="placeholder">Distance dose de départ</span>
                 </label>
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDoseVoulu(e.target.value)}></input>
-                    <span className="placeholder">Dose voulu</span>
+                    <span className="placeholder">Dose recherchée</span>
                 </label>
 
                 <label className="field-input">
                     <input type="number" value={perimetre} readOnly disabled></input>
-                    <span className="placeholder">Périmètre recherché</span>
+                    <span className="placeholder">Résultat : distance calculée</span>
                 </label>
 
                 <button className="button-valide" onClick={() => CalculPerim()}>Validez !</button>

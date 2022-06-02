@@ -38,12 +38,12 @@ function ActiviteRestante() {
         <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
             <label className="field-input">
                 <input type="number" onChange={(e) => setActIni(e.target.value)}></input>
-                <span className="placeholder">Activite Initial</span>
+                <span className="placeholder">Activité Initiale</span>
             </label>
             
             <label className="field-input">
                 <input type="texte" value={periode + ' ' + unite} onChange={(e) => setPeriode(e.target.value)}></input>
-                <span className="placeholder">Periode</span>
+                <span className="placeholder">Période</span>
             </label>
 
             <label className="field-input">

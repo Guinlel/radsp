@@ -50,6 +50,10 @@ body{
   background-color: #ffeaa7;
 }
 
+.field-input input:disabled{
+  background-color: #ecf0f1 ;
+}
+
 /* Ativité restante  */
 
 .activite-content{

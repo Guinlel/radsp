@@ -29,7 +29,7 @@ function CalculDose() {
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDoseM(e.target.value)}></input>
-                    <span className="placeholder">Dose mesuré</span>
+                    <span className="placeholder">Dose mesurée</span>
                 </label>
 
                 <HandleUnite HandleChange={HandleChangeUnite} />
@@ -46,7 +46,7 @@ function CalculDose() {
 
                 <label className="field-input">
                     <input type="texte" value={doseRech + ' ' + unite} readOnly disabled></input>
-                    <span className="placeholder">Dose recherché</span>
+                    <span className="placeholder">Résultat : Dose calculée</span>
                 </label>
 
                 <button className="button-valide" onClick={() => Calcul()} >Validez ! </button>
