@@ -10,7 +10,7 @@ function Home() {
     const [energie, setEnergie] = useState(null);
     const [emissionPrinc, setEmissionPrinc] = useState(null);
     const [emissionSecond, setEmissionSec] = useState(null);
-    const [isActive , setActive] = useState('false');
+    const [isActive , setActive] = useState('true');
     const radionucleide = radionucleides;
 
     const RenderInfo = () => {
@@ -33,7 +33,6 @@ function Home() {
     const HandleChange = (e) => {
         // Initialise la liste avec les données correspondant aux choix du select 
         var id = e;
-        setActive(!isActive);
         radionucleide.map((radio) => {
             if (id == radio.id) {
                 setPeriode(radio.periode);
@@ -46,12 +45,18 @@ function Home() {
         }
         )
     }
+
+
+    const handleActive = ()=>{
+        setActive(!isActive);
+    }
+    
     return (
     <div className="home">
         <Navigation />
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
-        <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
-        <div id="card-rad" className={isActive ? 'card-rad-hidden' : null} >         
+        <ChoixRadio tab={radionucleide} changeActive={handleActive} changeHandler={HandleChange} />
+        <div id="card-rad" className={isActive ? null : 'card-rad-hidden'} >         
             <RenderInfo />
         </div>
     </div>

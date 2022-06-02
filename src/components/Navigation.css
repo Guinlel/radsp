@@ -17,6 +17,10 @@
     font-style: oblique;
 }
 
+.navigation-close{
+  display: none;
+}
+
 .navigation{
     visibility: hidden;
     position: absolute;
@@ -28,14 +32,22 @@
     flex-direction: column;
   
   }
-  
+
+  .close-img{
+    width : 2em;
+    margin-left: 18em;
+    margin-top: -3em;
+    height : 3em;
+  }
+ 
+
   .navigation-visible{
     z-index: 2;
     top:0%;
     background-color: #fdcb6e;
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 100%;
     text-align: start;
     animation: slidemenu 0.5s ;
     visibility:visible ;
@@ -52,7 +64,18 @@
     }
     to{
         height: 100%;
-        width:80%;
+        width:100%;
+    }
+  }
+
+  @keyframes slidemenu-back{
+    from{
+      height: 100%;
+      width: 100%;
+    }
+    to{
+      height: 100%;
+      width: 0%;
     }
   }
 

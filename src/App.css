@@ -113,7 +113,7 @@ body{
 }
 
 #card-rad.card-rad-hidden{
-  display: block;
+  display: block ;
   height: 0%;
   border: 0px;
   border: 1px solid #fd6a37;
