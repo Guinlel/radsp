@@ -10,7 +10,7 @@ function CalculDose() {
     const [doseMes, setDoseM] = useState(0);
     const [distanceMes, setDistMes] = useState(0);
     const [distanceInc, setDistanceInc] = useState(0);
-    const [unite, SetUnite] = useState("");
+    const [unite, setUnite] = useState("");
 
     function Calcul() {
         // Formule qui permet de connaitre la dose reçu en fonction de la dose de départ à une distance précise et de la distance de la 2ème dose 
@@ -19,7 +19,7 @@ function CalculDose() {
     }
 
     const HandleChangeUnite = (props) => {
-        SetUnite(props);
+        setUnite(props);
     }
 
     return (
@@ -45,7 +45,7 @@ function CalculDose() {
                 </label>
 
                 <label className="field-input">
-                    <input type="number" value={doseRech + ' ' + unite} readOnly disabled></input>
+                    <input type="texte" value={doseRech + ' ' + unite} readOnly disabled></input>
                     <span className="placeholder">Dose recherché</span>
                 </label>
 
