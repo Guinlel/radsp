@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React , {useState} from "react";
 import { Menu, Box ,Button } from "@mui/material";
 import Navigation from "./Navigation";
@@ -35,8 +36,23 @@ function MenuBurger(){
             <Menu id="menu-burger" anchorEl={anchor} open={open} onClose={handleClose}>
                 <Navigation toggleMenu={toggleMenu} />
             </Menu>
+=======
+import React from "react";
+
+function MenuBurger(props){
+    const nav = document.getElementById('navigation');
+
+           
+    return(
+        <div className="menu-burger-container">
+            <button id='menu-button'className="menu-burger" onClick={props.handleClick}>Menu</button>
+>>>>>>> test-branch
         </div>
     )
 }
 
+<<<<<<< HEAD
 export default MenuBurger;
+=======
+export default MenuBurger
+>>>>>>> test-branch

@@ -14,6 +14,7 @@ function ChoixRadio(props){
     )
 
     return(
+<<<<<<< HEAD
         // <select className="choix-radio" >
         //     <option>Veuillez Choisir un Element</option>
         //     {optionRadio}
@@ -22,6 +23,10 @@ function ChoixRadio(props){
             <FormControl>
             <InputLabel>Element</InputLabel>
             <Select autoWidth label="Element" onChange={(e)=> props.changeHandler(e.target.value)}>
+=======
+        <select  className="choix-radio" onFocus={props.changeActive} onClick={(e)=> props.changeHandler(e.target.value)}>
+            <option value="">Veuillez choisir un élément</option>
+>>>>>>> test-branch
             {optionRadio}
             </Select>
             <FormHelperText>Selectionner un élément</FormHelperText>
