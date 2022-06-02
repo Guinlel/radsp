@@ -7,7 +7,7 @@ function CalculPerim() {
     const [doseDep, setDoseDep] = useState(0);
     const [distanceDep, setDistanceDep] = useState(0);
     const [doseVoulu, setDoseVoulu] = useState(0);
-    const [perimetre, setPerimetre] = useState(0);
+    const [perimetre, setPerimetre] = useState('');
     const radionucleide = radionucleides;
 
     const CalculPerim = () => {

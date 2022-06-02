@@ -34,8 +34,8 @@ function ActiviteRestante() {
 
     return <div className="activite-restante">
         <Navigation />
-        <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
         <div className="activite-content">
+        <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
             <label className="field-input">
                 <input type="texte" onChange={(e) => setActIni(e.target.value)}></input>
                 <span className="placeholder">Activite Initial</span>
@@ -54,9 +54,10 @@ function ActiviteRestante() {
             <label className="field-input">
                 <input type="texte" value={actRes} disabled readOnly ></input>
                 <span>Activité restante</span>
-            </label>       
-        </div>
-        <button className="button-valide" onClick={() => CalculAct()}>Validez</button>
+            </label>
+
+            <button className="button-valide" onClick={() => CalculAct()}>Validez</button>
+        </div>    
     </div>
 }
 

@@ -55,7 +55,7 @@ function Home() {
     <div className="home">
         <Navigation />
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
-        <ChoixRadio tab={radionucleide} changeActive={handleActive} changeHandler={HandleChange} />
+        <ChoixRadio className="choix-home" tab={radionucleide} changeActive={handleActive} changeHandler={HandleChange} />
         <div id="card-rad" className={isActive ? null : 'card-rad-hidden'} >         
             <RenderInfo />
         </div>
