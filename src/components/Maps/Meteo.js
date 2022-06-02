@@ -10,11 +10,15 @@ function Meteo(props) {
     const [direction, setDirection] = useState("");
     const [place , setPlace] = useState("");
     const [raf, setRafale] = useState(null);
+    const [humidite , setHumidite] = useState(null);
     const API_KEY = "4d1836cb9cf0a6b1910a892834b98e55";
 
     // Limitation des chiffres aprés la virgule pour les rafales de vent
     let rafa = raf*3.6;
     let rafale = rafa.toFixed(2);
+    // Limitation des chiffres aprés la virgule pour la vitesse du vent
+    let vit = speed*3.6;
+    let vitesse = vit.toFixed(2);
     useEffect(() => {
         navigator.geolocation.watchPosition((position) => {
             setLatitude(position.coords.latitude);
@@ -32,11 +36,19 @@ function Meteo(props) {
         }
     }
 
+    const Humidite = ()=>{
+        if (!humidite){
+            return <p></p>
+        } else {
+            return <p> Humidité : {humidite} %</p>
+        }
+    }
+
     const VentNul = ()=>{
         if (!speed){
             return <p> Aucune informations disponible </p>
         } else{
-            return <div className="wind-info"> <p>Vitesse du vent :{speed * 3.6} km/h</p> 
+            return <div className="wind-info"> <p>Vitesse du vent :{vitesse} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 
                     </div>
         }
@@ -90,6 +102,7 @@ function Meteo(props) {
                 setDeg(response.data.wind.deg);
                 setRafale(response.data.wind.gust);
                 setPlace(response.data.name);
+                setHumidite(response.data.main.humidity);
             }).catch((error)=>{
                 console.log(error);
             })
@@ -103,7 +116,8 @@ function Meteo(props) {
             <div className="card-meteo">         
             <p className="meteo-place">{place}</p>
             <VentNul/>
-            <RafaleNul/>  
+            <RafaleNul/>
+            <Humidite/>
             </div>
         </div>
         
