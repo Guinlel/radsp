@@ -64,7 +64,7 @@ function ActiviteRestante() {
                 <span>Activité restante</span>
             </label>
 
-            <p>{"Temps restants d'activité : " +  dureeRestante}</p>
+            <p>{"Temps restants d'activité : " +  dureeRestante +"h"}</p>
 
             <button className="button-valide" onClick={() => CalculAct()}>Validez</button>
         </div>    
