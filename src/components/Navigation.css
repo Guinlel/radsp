@@ -1,10 +1,10 @@
 .link{
     text-decoration: none;
-    color: #95a5a6;
-    background-color:#34495e ;
+    color: antiquewhite;
+    background-color:#0075FC ;
     text-align: center;
     margin: 15px;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border: 2px solid #34495e;
     border-radius: 10px;
     margin-top: 2em;
@@ -32,13 +32,14 @@
     margin-left: 85%;
     margin-top: -3em;
     height : 3em;
+    fill: #0075FC;
   }
  
 
   .navigation-visible{
     z-index: 2;
     top:0%;
-    background-color: #fdcb6e;
+    background-color: #00120B;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -61,25 +62,27 @@
     }
   }
 
-  @keyframes slidemenu-back{
-    from{
-      height: 100%;
-      width: 100%;
-    }
-    to{
-      height: 100%;
-      width: 0%;
-    }
-  }
-
   .menu-burger{
-    position: absolute;
-    right: 3%;
+    position: relative;
+    top: -2em;
+    left: 18em;
     border-radius: 5px;
-    padding: 0.75rem;
+    padding: 0.5rem 2rem;
     border: 2px solid;
-    top: 3%;
-    background-color: #ffeaa7;
+    background-color: #0075FC;
+    color: whitesmoke;
     font-size: 1rem;
     font-style: oblique;
+  }
+
+  .logo-header{
+    position: relative;
+    top : 1rem;
+    left: 2rem;
+    width: 10em;
+  
+  }
+
+  .header{
+    background-color: #00120B;
   }

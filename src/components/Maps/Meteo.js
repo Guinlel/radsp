@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Header from "../Header";
 import Navigation from "../Navigation";
 
 function Meteo(props) {
@@ -111,8 +112,8 @@ function Meteo(props) {
 
 
     return (
-        <div>
-            <Navigation/>
+        <div className="container">
+            <Header/>
             <div className="card-meteo">         
             <p className="meteo-place">{place}</p>
             <VentNul/>

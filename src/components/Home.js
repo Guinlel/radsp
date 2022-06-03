@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ChoixRadio from "./ComboBox";
-import Navigation from "./Navigation";
+import Header from "./Header";
 import radionucleides from "../ressources/Radio.json";
 
 function Home() {
@@ -33,7 +33,9 @@ function Home() {
     const HandleChange = (e) => {
         // Initialise la liste avec les données correspondant aux choix du select 
         var id = e;
+        // eslint-disable-next-line
         radionucleide.map((radio) => {
+            // eslint-disable-next-line
             if (id == radio.id) {
                 setPeriode(radio.periode);
                 setUnite(radio.unite);
@@ -53,7 +55,7 @@ function Home() {
     
     return (
     <div className="home">
-        <Navigation />
+        <Header/>
         {/* Fais la navette entre le component parent (ici) et l'enfant (choixRadio) */}
         <ChoixRadio className="choix-home" tab={radionucleide} changeActive={handleActive} changeHandler={HandleChange} />
         <div id="card-rad" className={isActive ? null : 'card-rad-hidden'} >         

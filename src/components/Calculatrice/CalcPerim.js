@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navigation from "../Navigation";
+import Header from "../Header";
 import radionucleides from "../../ressources/Radio.json";
 
 function CalculPerim() {
@@ -18,7 +18,7 @@ function CalculPerim() {
 
     return (
         <div className="container">
-            <Navigation />
+            <Header/>
             <div className="card-calcul-perim">
                 <label className="field-input">
                     <input type="number" id="doseDepart" onChange={(e) => setDoseDep(e.target.value)}></input>
@@ -40,7 +40,7 @@ function CalculPerim() {
                     <span className="placeholder">Résultat : distance calculée</span>
                 </label>
 
-                <button className="button-valide" onClick={() => CalculPerim()}>Validez !</button>
+                <button className="button-valide" onClick={() => CalculPerim()}>Validez</button>
             </div>
 
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Navigation from "../Navigation";
+import Header from "../Header";
+
 import HandleUnite from "./HandleUnit";
 
 
@@ -24,7 +25,7 @@ function CalculDose() {
 
     return (
         <div className="container">
-            <Navigation />
+            <Header/>
             <div className="card-calc-dose">
 
                 <label className="field-input">
@@ -49,7 +50,7 @@ function CalculDose() {
                     <span className="placeholder">Résultat : Dose calculée</span>
                 </label>
 
-                <button className="button-valide" onClick={() => Calcul()} >Validez ! </button>
+                <button className="button-valide" onClick={() => Calcul()} >Validez</button>
             </div>
         </div>
     )

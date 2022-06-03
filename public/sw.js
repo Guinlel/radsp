@@ -7,13 +7,15 @@ const Cache_Files= [
     'manifest.json',
     'favicon.ico',
     'sockjs-node/info?t=1653402190477',
-    'logo192.png',
+    'icon-192.png',
+    'icon-512.png',
     '/static/js/2.chunk.js',
     '/conversion',
     '/calcul-dose',
     '/calcul-perimetre',
     '/activite-restante',
     '/meteo',
+    'static/media/icon-header.8ec26b15.png'
 ]
 
 // Installing SW

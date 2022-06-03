@@ -1,16 +1,5 @@
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 body{
-  background-color: #ffeaa7;
+  background-color: #eeeeee;
 }
 
 /* Style Input */
@@ -24,7 +13,7 @@ body{
   width: 80%;
   height: 3rem;
   background-color: white;
-  border: 2px solid #fad390;
+  border: 2px solid #0075FC;
   border-radius: 10px;
   outline: none;
   padding: 0 1rem;
@@ -42,12 +31,12 @@ body{
 
 .field-input input:valid ~ span{
   top: 1.8em;
-  background-color: #ffeaa7;
+  background-color: #eeeeee;
 }
 
 .field-input input:disabled ~ span{
   top: 1.8em;
-  background-color: #ffeaa7;
+  background-color: #eeeeee;
 }
 
 .field-input input:disabled{
@@ -66,19 +55,18 @@ body{
   display: grid;
  width: auto;
  height: auto;
- margin-top: 30%;
+ margin-top: 1rem;
  margin-right : 5em;
  padding: 8px;
  border-radius: 10px;
- border: 2px solid #fad390;
+ border: 2px solid #0075FC;
 }
 
-
-.choix-radio:hover::selection{
-  background-color: #61dafb;
-}
 
 .button-valide{
+  position:relative;
+  background-color: #0075FC;
+  left: 40%;
   width: 8rem;
   height: 2.5rem;
   font-size: large;
@@ -87,18 +75,17 @@ body{
   border: 2px solid;
   padding: 5px;
   border-radius: 5px;
-  color: #95a5a6;
-  margin-left: 40%;
-  transform: translate(-50%);
+  color: antiquewhite;
+  transform: translateX(-50%);
 }
 
 /* Meteo */
 
 .card-meteo{
-  border: 1px solid #fd6a37;;
-  background-color: #fd6a37;
-  color: #e2e2e2 ;
-  border-radius: 4px;
+  background-color: white;
+  font : 14px 'Roboto' , sans-serif;
+  font-weight: bold;
+  border-radius: 14px;
   margin: 25% 3em 2em 3em;
   padding: 1em;
   font-style: italic;
@@ -124,13 +111,12 @@ body{
 
 #card-rad.card-rad-hidden{
   display: block ;
+  align-items: center;
   height: 0%;
   border: 0px;
-  border: 1px solid #fd6a37;
-  background-color: #fd6a37;
-  border-radius: 5px;
-  justify-content: center;
-  color: #e2e2e2 ;
+  background-color: white;
+  border-radius: 14px;
+
   margin: 2em;
   padding: 1em;
 }
@@ -150,7 +136,6 @@ body{
   display: flex;
   flex-direction: column;
   margin-left: 2em;
-  margin-top: 22%;
 }
 
 /* Calcul de Dose  */
@@ -159,7 +144,7 @@ body{
   display: flex;
   flex-direction: column;
   margin-left: 3em;
-  margin-top: 5em;
+
 }
 
 .unite-select{
@@ -170,7 +155,7 @@ body{
   margin-right : 5em;
   padding: 8px;
   border-radius: 10px;
-  border: 2px solid #fad390;
+  border: 2px solid #0075FC
 }
 
 /* Calcul Perim */
@@ -179,5 +164,4 @@ body{
   display: flex;
   flex-direction: column;
   margin-left: 3em;
-  margin-top: 7em;
 }

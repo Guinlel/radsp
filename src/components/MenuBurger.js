@@ -1,7 +1,6 @@
 import React from "react";
 
 function MenuBurger(props){
-    const nav = document.getElementById('navigation');
 
            
     return(

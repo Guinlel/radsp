@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Navigation from '../Navigation';
+import Header from '../Header.js';
+
 
 
 function Conversion(value) {
@@ -27,7 +28,7 @@ function Conversion(value) {
   }
   return (
     <div className='container'>
-      <Navigation />
+      <Header/>
       <div className="render-conversion">
         
         <label className="field-input" >

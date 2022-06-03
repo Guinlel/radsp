@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ChoixRadio from "../ComboBox";
-import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
+import Header from "../Header";
 
 
 function ActiviteRestante() {
@@ -28,8 +28,10 @@ function ActiviteRestante() {
 
     const HandleChange = (e) => {
         var id = e;
+        // eslint-disable-next-line
         radionucleide.map((radio) => {
-            if (id == radio.id) {
+            // eslint-disable-next-line
+            if (id  == radio.id) {
                 console.log(radio.periode);
                 setPeriode(radio.periode);
                 setUnite(radio.unite);
@@ -39,7 +41,7 @@ function ActiviteRestante() {
     }
 
     return <div className="activite-restante">
-        <Navigation />
+        <Header/>
         <div className="activite-content">
         <ChoixRadio filter="yes" tab={radionucleide} changeHandler={HandleChange} />
             <label className="field-input">

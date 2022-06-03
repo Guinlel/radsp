@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function ChoixRadio(props) {
+    // eslint-disable-next-line
     const [radio, setRadio] = useState([props.tab]);
     const [optionRadio, setOptionRadio] = useState([])
     const radios = radio[0];
