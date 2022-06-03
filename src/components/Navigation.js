@@ -25,9 +25,9 @@ function Navigation() {
             <nav id='navigation' className={isActive ? "navigation" : "navigation-visible"}>
                 <CloseLogo id="close-img" className="close-img" />
                 <Link to="/" className="link">Accueil</Link>
-                <Link to="/conversion" className="link"> Conversion</Link>
-                <Link to="/calcul-dose" className="link">Calcul de dose</Link>
-                <Link to="/calcul-perimetre" className="link">Calcul de périmètre</Link>
+                <Link to="/conversion" className="link"> Conversion Ci vers Bq</Link>
+                <Link to="/calcul-dose" className="link">Calcul de dose selon la distance</Link>
+                <Link to="/calcul-perimetre" className="link">Calcul de distance selon la dose</Link>
                 <Link to="/activite-restante" className="link"> Activité restante </Link>
                 <Link to="/meteo" className="link">Meteo</Link>
             </nav>
