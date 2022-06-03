@@ -11,7 +11,7 @@ function Navigation() {
     useEffect(()=>{
         document.getElementById('close-img').addEventListener('click',(e)=>{
             setActive(!isActive);
-            nav.className = 'navigation';
+            // nav.className = 'navigation';
         })
     })
 
