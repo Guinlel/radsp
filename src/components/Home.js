@@ -23,7 +23,7 @@ function Home() {
                 <p>Periode : {periode + ' ' + unite }</p>
                 <p className="card-title">Principales émissions : </p>
                 <p> {emissionPrinc + ',' + emissionSecond}</p>
-                <p className="card-title">Energies relachés :</p>
+                <p className="card-title">Energies relachées :</p>
                 <p>{energie}</p>
             </div>
             )

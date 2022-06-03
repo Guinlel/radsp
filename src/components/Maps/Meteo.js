@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../Header";
-import Navigation from "../Navigation";
 
 function Meteo(props) {
     const [lat, setLatitude] = useState(null);
