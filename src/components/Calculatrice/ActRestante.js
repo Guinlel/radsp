@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ChoixRadio from "../ComboBox";
 import Navigation from "../Navigation";
 import radionucleides from "../../ressources/Radio.json";
-import MenuBurger from "../MenuBurger";
 
 
 function ActiviteRestante() {
@@ -11,7 +10,14 @@ function ActiviteRestante() {
     const [tmps, setTmps] = useState(0);
     const [actRes, setActRes] = useState('');
     const [unite, setUnite] = useState("");
+    const [ dureeRestante , setDureeRestante] = useState('');
     const radionucleide = radionucleides;
+
+    useEffect(()=>{
+        let periodeRestante = tmps/periode
+        let duree = ((10 - periodeRestante)*periode)/60
+        setDureeRestante(duree.toFixed(2));
+    })
 
     function CalculAct() {
         //Première partie du calcul permettant de connaître l'activité restante (temps divise par la période)
@@ -35,7 +41,7 @@ function ActiviteRestante() {
     return <div className="activite-restante">
         <Navigation />
         <div className="activite-content">
-        <ChoixRadio tab={radionucleide} changeHandler={HandleChange} />
+        <ChoixRadio filter="yes" tab={radionucleide} changeHandler={HandleChange} />
             <label className="field-input">
                 <input type="number" onChange={(e) => setActIni(e.target.value)}></input>
                 <span className="placeholder">Activité Initiale</span>
@@ -55,6 +61,8 @@ function ActiviteRestante() {
                 <input type="number" value={actRes} disabled readOnly ></input>
                 <span>Activité restante</span>
             </label>
+
+            <p>{"Temps restants d'activité : " +  dureeRestante}</p>
 
             <button className="button-valide" onClick={() => CalculAct()}>Validez</button>
         </div>    
