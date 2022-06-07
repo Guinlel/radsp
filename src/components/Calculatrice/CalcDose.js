@@ -37,12 +37,12 @@ function CalculDose() {
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDistanceInc(e.target.value)} ></input>
-                    <span className="placeholder">Distante de la dose mesuré (m)</span>
+                    <span className="placeholder">Distance de la dose mesurée (m)</span>
                 </label>
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDistMes(e.target.value)} ></input>
-                    <span className="placeholder">Distance de la dose recherché</span>
+                    <span className="placeholder">Distance de la dose recherchée</span>
                 </label>
 
                 <label className="field-input">
@@ -50,7 +50,7 @@ function CalculDose() {
                     <span className="placeholder">Résultat : Dose calculée</span>
                 </label>
 
-                <button className="button-valide" onClick={() => Calcul()} >Validez</button>
+                <button className="button-valide" onClick={() => Calcul()} >Valider</button>
             </div>
         </div>
     )

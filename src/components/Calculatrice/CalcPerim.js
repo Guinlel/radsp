@@ -40,7 +40,7 @@ function CalculPerim() {
                     <span className="placeholder">Résultat : distance calculée</span>
                 </label>
 
-                <button className="button-valide" onClick={() => CalculPerim()}>Validez</button>
+                <button className="button-valide" onClick={() => CalculPerim()}>Valider</button>
             </div>
 
         </div>

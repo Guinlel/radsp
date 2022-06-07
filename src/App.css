@@ -165,3 +165,119 @@ body{
   flex-direction: column;
   margin-left: 3em;
 }
+
+/* Accueil */
+
+.fake-button{
+    text-decoration: none;
+    border: solid 2px;
+    height: 3em;
+    width: 8em;
+    background-color: #0075FC;
+    border-radius: 10px;
+    color: antiquewhite;
+    padding: 0.4em 1em;
+    text-align: center;
+}
+
+.button-container{
+  position: relative;
+  display:inline-flex;
+  left: 4%;
+  padding: 0.5rem;
+}
+
+.presentation{
+  background-color: white;
+  padding: 2em;
+  font : 14px 'Roboto' , sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  margin: 1em;
+}
+
+/* Etiquettes */
+.etiquette{
+  width: 100%;
+  margin-top: 1%;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  .card-meteo{
+      margin: 10% 3em 2em 3em;
+  }
+  
+  .logo-header {
+      top: 1.7rem;
+      left: 3rem;
+      width: 14em;
+    }
+  }
+  
+  @media(min-width: 769px) and (max-width: 1388px){
+      .render-conversion{
+          margin-left: 7em;
+      }
+      .card-meteo{
+          margin: 5% 3em 2em 3em;
+      }
+      .field-input input:valid ~ span{
+          top: 1.5em;
+      }
+      .field-input input:disabled ~ span{
+          top: 1.5em;
+      }
+      .field-input input{
+          width: 90%;
+      } 
+      .field-input{
+          padding-top: 2.5em;
+      } 
+      .choix-radio{
+          margin-left: 2em;
+          margin-right: 10em;
+      }
+      .logo-header {
+          position: relative;
+          top: 1.7rem;
+          left: 2rem;
+          width: 12em;
+      }
+  }
+  
+  @media(min-width:1389px) {
+      .render-conversion{
+          margin-left: 7em;
+      }
+  
+      .card-meteo{
+          margin: 5% 3em 2em 3em;
+      }
+      .field-input input:valid ~ span{
+          top: 1.5em;
+      }
+      .field-input input:disabled ~ span{
+          top: 1.5em;
+      }
+      .field-input input{
+          width: 90%;
+      } 
+      .field-input{
+          padding-top: 2.5em;
+      } 
+      .choix-radio{
+          margin-left: 2em;
+          margin-right: 10em;
+      }
+      .logo-header {
+        position: relative;
+        top: 1.7rem;
+        left: 2rem;
+        width: 12em;
+    }
+    .menu-burger{
+      top: 6%;
+    }
+  }
