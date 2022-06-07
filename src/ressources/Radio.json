@@ -30,5 +30,82 @@
         "periode": "1600 ",
         "unite": "ans",
         "energie": "Alpha 4784 keV 94%"
+    },
+    {
+        "id": 4 ,
+        "name": "Cobalt-60" ,
+        "emission":{
+            "principale" : "B- 318 keV",
+            "secondaire" : " Gamma 1332 keV"
+        } ,
+        "periode" : "5.27" ,
+        "unite": "ans",
+        "energie" :"B- 318 keV 100%  "
+    },
+    {
+        "id": "5" ,
+        "name":"Américium-241" ,
+        "emission":{
+            "principale" : "Alpha 5486 keV",
+            "secondaire" : "Gamma 60kev et "
+        } ,
+        "periode" : "432",
+        "unite": "ans",
+        "energie" :"Alpha 5486 85%" 
+    },
+    {
+        "id": "6" ,
+        "name":"Cadmium-109" ,
+        "emission":{
+            "principale" : "Gamma 88.03 keV",
+            "secondaire" : " "
+        } ,
+        "periode" : "462.6",
+        "unite": "jours",
+        "energie" :"Gamma 88.03 keV 3.7%" 
+    },
+    {
+        "id": "7" ,
+        "name":"Iridium-192" ,
+        "emission":{
+            "principale" : "B- 675 keV et 538 keV",
+            "secondaire" : "Gamma 316 keV , 468 keV , 308 keV et 296 keV"
+        } ,
+        "periode" : "74",
+        "unite": "jours",
+        "energie" :"B- 675 keV 48% , 538 keV 41% ,  Gamma 316 keV 83% et 468 keV 48%" 
+    },
+    {
+        "id": "8" ,
+        "name":"Technétium-99m" ,
+        "emission":{
+            "principale" : "Gamma/X 141 keV",
+            "secondaire" : " "
+        } ,
+        "periode" : "6",
+        "unite": "heures",
+        "energie" :"Gamma/X 142 keV 89%" 
+    },
+    {
+        "id":"9",
+        "name": "Iode-125" ,
+        "emission":{
+            "principale": "X 27 keV",
+            "secondaire": "Gamma 35 keV"
+        },
+        "periode": "59.4",
+        "unite":"jours",
+        "energie":"X 27.4 keV 73.8% et 27.2 keV 39.6% , Gamma 35.5 keV 6.7%"
+    },
+    {
+        "id":"10",
+        "name": "Iode-131" ,
+        "emission":{
+            "principale": "Gamma/X 364 keV",
+            "secondaire": "Bêta 606.3 keV"
+        },
+        "periode": "8.02",
+        "unite":"jours",
+        "energie":"Gamma/X 364.46 keV 81.6% , Bêta  606.3 keV 89.6%"
     }
 ]

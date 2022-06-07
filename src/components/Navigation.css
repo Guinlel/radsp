@@ -9,6 +9,17 @@
   border-radius: 10px;
   font-style: oblique;
 }
+.link-active{
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: red;
+  text-align: center;
+  margin: 15px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #34495e;
+  border-radius: 10px;
+  font-style: oblique;
+}
 
 .navigation-close {
   display: none;
@@ -66,8 +77,8 @@
 .menu-burger {
   position: absolute;
   width: 10%;
-  height: 5%;
-  top: 2%;
+  height: 4%;
+  top: 1.5%;
   right: 5%;
   fill: #0075FC;
   border: #0075FC 2px solid;
