@@ -50,7 +50,11 @@ function Home() {
 
 
     const handleActive = ()=>{
-        setActive(!isActive);
+        if (periode){
+            setPeriode('true')
+        } else {
+            setActive(!isActive);
+        }
     }
     
     return (
