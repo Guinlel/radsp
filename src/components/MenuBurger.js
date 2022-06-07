@@ -1,11 +1,13 @@
 import React from "react";
+import {ReactComponent as MenuBurgerIcon} from '../img/menu.svg';
 
 function MenuBurger(props){
 
            
     return(
         <div className="menu-burger-container">
-            <button id='menu-button'className="menu-burger" onClick={props.handleClick}>Menu</button>
+            <MenuBurgerIcon id='menu-button' className="menu-burger" onClick={props.handleClick}/>
+            {/* <button id='menu-button'className="menu-burger" onClick={props.handleClick}>Menu</button> */}
         </div>
     )
 }
