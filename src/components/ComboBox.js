@@ -18,7 +18,7 @@ function ChoixRadio(props) {
                     {radio.name}
                 </option>))
         }
-     } )
+     },[] );
 
 
 return (

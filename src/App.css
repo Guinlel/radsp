@@ -32,11 +32,19 @@ body{
 .field-input input:valid ~ span{
   top: 1.8em;
   background-color: #eeeeee;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.field-input input:valid{
+  background-color: #eeeeee;
 }
 
 .field-input input:disabled ~ span{
   top: 1.8em;
   background-color: #eeeeee;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .field-input input:disabled{

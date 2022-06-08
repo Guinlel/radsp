@@ -26,7 +26,7 @@ function Meteo(props) {
             meteoChange();
         })
         switchDirection();
-    })
+    },[lat,lng,])
 
     const RafaleNul = ()=>{
         if (!raf ){
