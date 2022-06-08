@@ -8,7 +8,7 @@ function ChoixRadio(props) {
 
     useEffect(() => {
         if (props.filter === 'yes') {
-            setOptionRadio(radios.filter(radio => radio.unite === 'minutes' || radio.unite === 'heures').map((radio) =>
+            setOptionRadio(radios.filter(radio => radio.unite === 'minutes' || radio.unite === 'heures' || radio.unite==='jours').map((radio) =>
                 <option key={radio.id} value={radio.id} >
                     {radio.name}
                 </option>))
