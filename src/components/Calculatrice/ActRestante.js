@@ -50,8 +50,8 @@ function ActiviteRestante() {
             </label>
             
             <label className="field-input">
-                <input type="texte" value={periode + ' ' + unite} onChange={(e) => setPeriode(e.target.value)}></input>
-                <span className="placeholder">Période</span>
+                <input type="number" value={periode} onChange={(e) => setPeriode(e.target.value)}></input>
+                <span className="placeholder">{"Période : " + unite}</span>
             </label>
 
             <label className="field-input">
