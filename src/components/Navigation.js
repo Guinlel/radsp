@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MenuBurger from "./MenuBurger";
 import "./Navigation.css";
 import {ReactComponent as CloseLogo} from '../img/close.svg'
@@ -22,15 +22,32 @@ function Navigation() {
             <MenuBurger handleClick={handleClick}/>
             <nav id='navigation' className={isActive ? "navigation" : "navigation-visible"}>
                 <CloseLogo id="close-img" className="close-img" />
-                <Link to="/" className="link">Accueil</Link>
-                <Link to="/radionucleide" className="link">Radionucléides</Link>
-                <Link to="/conversion" className="link"> Conversion Ci vers Bq</Link>
-                <Link to="/calcul-dose" className="link">Calcul de dose selon la distance</Link>
-                <Link to="/calcul-perimetre" className="link">Calcul de distance selon la dose</Link>
-                <Link to="/activite-restante" className="link"> Activité restante </Link>
-                <Link to="/etiquette" className="link">Etiquettes de Transport</Link>
-                <Link to="/meteo" className="link">Meteo</Link>
-        
+                <ul className="ul-nav">
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/">Accueil</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/radionucleide">Radionucléides</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/conversion">Conversion Ci en Bq</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-dose">Calcul de dose selon la distance </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-perimetre">Calcul de distance selon la dose</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/activite-restante">Activité restante</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/etiquette">Etiquettes de Transport</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/meteo">Météo</NavLink>
+                    </li>
+                </ul>    
             </nav>
         </div>
     )

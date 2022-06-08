@@ -17,7 +17,7 @@ function App() {
     const element = (
         <BrowserRouter>
             <Routes>
-                <Route path="/" exact element={<Accueil/>} />
+                <Route path="/" element={<Accueil/>} />
                 <Route path="/radionucleide" element={<Home/>}/>
                 <Route path="/conversion" element={<Conversion/>} />
                 <Route path="/calcul-dose" element={<CalculDose/>}/>

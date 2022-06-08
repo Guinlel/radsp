@@ -2,23 +2,35 @@
   text-decoration: none;
   color: antiquewhite;
   background-color: #0075FC;
-  text-align: center;
-  margin: 15px;
   padding: 0.5rem 1rem;
   border: 2px solid #34495e;
-  border-radius: 10px;
+  border-radius: 11px;
   font-style: oblique;
 }
 .link-active{
   text-decoration: none;
   color: antiquewhite;
   background-color: red;
-  text-align: center;
-  margin: 15px;
   padding: 0.5rem 1rem;
   border: 2px solid #34495e;
-  border-radius: 10px;
+  border-radius: 11px;
   font-style: oblique;
+}
+
+.ul-nav{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  padding-left: 0px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.ul-nav li{
+  display: grid;
+  padding-top: 1.75rem;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 .navigation-close {
