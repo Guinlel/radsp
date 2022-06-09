@@ -6,7 +6,6 @@ const Cache_Files= [
     '/static/js/bundle.js',
     '/manifest.json',
     '/favicon.ico',
-    '/sockjs-node/info?t=1654760187677',
     '/icon-192.png',
     '/icon-512.png',
     '/static/js/2.chunk.js',
@@ -32,34 +31,15 @@ self.addEventListener("install",(event)=>{
 });
 
 // SW Respond
-// self.addEventListener("fetch", event => {
-//     console.log(`Request of ${event.request.url}`);
-  
-//     // comportement par défaut: requête le réseau
-//     event.respondWith(fetch(event.request));
-//   });
-
-// self.addEventListener("fetch",(event)=>{
-//     event.respondWith(
-//         caches.match(event.request).
-//         catch(()=>{ return fetch(event.request)
-//         .then(()=>{
-//             return cache.open(CACHE_NAME).then(()=>{
-//                 caches.put(event.request, response.clone());
-//                 return response;
-//             })
-//         })
-//         })
-//     )
-// });
-
 self.addEventListener("fetch",event=>{
     if (event.request.url.includes("/api")){
         event.respondWith(caches.match(event.request));
         event.waitUntil(update(event.request).then(refresh));
     } else {
         event.respondWith(caches.match(event.request).then(response =>{{
-            return response;
+            if (response){
+                return response;
+            }         
         }}))
     }
 })
