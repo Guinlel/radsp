@@ -210,6 +210,16 @@ body{
   margin-top: 1%;
 }
 
+/* About */
+.about{
+  background-color: white;
+  padding: 2em;
+  font : 14px 'Roboto' , sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  margin: 1em;
+}
+
 /* Responsive */
 @media(max-width:768px){
 

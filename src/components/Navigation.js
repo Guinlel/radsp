@@ -47,6 +47,9 @@ function Navigation() {
                     <li>
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/meteo">Météo</NavLink>
                     </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" : "link"} to="/a-propos">A propos</NavLink>
+                    </li>
                 </ul>    
             </nav>
         </div>

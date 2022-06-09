@@ -8,7 +8,10 @@ function Accueil() {
         <div className="accueil-container">
             <Header/>
             <div className="presentation">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices ante. Aliquam fringilla est id auctor varius. Vestibulum facilisis sagittis laoreet. Donec a feugiat lacus. Curabitur arcu lorem, auctor non maximus at, consequat vitae tortor. Pellentesque vitae justo et ligula vehicula eleifend porttitor faucibus sem. Cras commodo et elit.
+            <p>
+            Les outils et informations de cette application sont fournis à titre indicatifs utilisables lors d’exercices.<br/>
+            Ils ne remplacent pas les méthodes de calculs et sources d’informations habituelles lors d’interventions        
+            </p>      
             </div>
             <div className="accueil-nav">
 

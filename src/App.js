@@ -11,6 +11,7 @@ import ActiviteRestante from './components/Calculatrice/ActRestante';
 import Meteo from './components/Maps/Meteo';
 import Accueil from './components/Accueil';
 import Etiquette from './components/Etiquette';
+import About from './components/About.js';
 
 function App() {
     
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/activite-restante" element={<ActiviteRestante/>}/>
                 <Route path="/etiquette" element={<Etiquette/>}/>
                 <Route path="/meteo" element={<Meteo/>}/>
+                <Route path="/a-propos" element={<About/>}/>
                 <Route path="*" element={
                     <main>
                         <Navigation/>
