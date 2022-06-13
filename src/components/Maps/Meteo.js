@@ -30,7 +30,7 @@ function Meteo(props) {
 
     const RafaleNul = ()=>{
         if (!raf ){
-            return <p>Aucune informations sur les rafales de vents disponible</p> ;
+            return <p>Chargement en cours , Veuillez patienter.</p> ;
         } else {
             return <p>Rafale: {rafale} km/h</p>;
         }
@@ -46,7 +46,7 @@ function Meteo(props) {
 
     const VentNul = ()=>{
         if (!speed){
-            return <p> Aucune informations disponible </p>
+            return <p></p>
         } else{
             return <div className="wind-info"> <p>Vitesse du vent :{vitesse} km/h</p> 
                          <p>Orientation du vent: {deg}° {direction}</p> 
@@ -109,6 +109,11 @@ function Meteo(props) {
         }     
     }
 
+    const handleRefresh = ()=>{
+        console.log("Rafraichir");
+        meteoChange();
+    }
+
 
     return (
         <div className="container">
@@ -117,8 +122,9 @@ function Meteo(props) {
             <p className="meteo-place">{place}</p>
             <VentNul/>
             <RafaleNul/>
-            <Humidite/>
+            <Humidite/>           
             </div>
+            <button className="btn-refresh" onClick={handleRefresh}>Rafraichir</button>
         </div>
         
     )

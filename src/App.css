@@ -106,6 +106,21 @@ body{
   text-decoration: underline;
 }
 
+.btn-refresh{
+  position:relative;
+  background-color: #0075FC;
+  left: 40%;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: large;
+  font-style: oblique;
+  margin-top: 2em;
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 5px;
+  color: antiquewhite;
+  transform: translateX(-50%);
+}
 /* Home */
 
 .choix-radio{

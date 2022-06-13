@@ -76,3 +76,13 @@ function refresh(response){
         return jsonResponse.data
     })
 }
+
+function cache(request, response) {
+    if (response.type === "error" || response.type === "opaque") {
+      return Promise.resolve(); // do not put in cache network errors
+    }
+  
+    return caches
+      .open(CACHE_NAME)
+      .then(cache => cache.put(request, response.clone()));
+    }
