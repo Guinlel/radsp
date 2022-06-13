@@ -11,6 +11,7 @@ function Meteo(props) {
     const [place , setPlace] = useState("");
     const [raf, setRafale] = useState(null);
     const [humidite , setHumidite] = useState(null);
+    // OpenWeather Api
     const API_KEY = "4d1836cb9cf0a6b1910a892834b98e55";
 
     // Limitation des chiffres aprés la virgule pour les rafales de vent
@@ -30,7 +31,7 @@ function Meteo(props) {
 
     const RafaleNul = ()=>{
         if (!raf ){
-            return <p>Chargement en cours , Veuillez patienter.</p> ;
+            return <p>Chargement en cours , Veuillez patienter ...</p> ;
         } else {
             return <p>Rafale: {rafale} km/h</p>;
         }

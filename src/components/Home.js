@@ -24,7 +24,8 @@ function Home() {
                 <p className="card-title">Principales émissions : </p>
                 <p> {emissionPrinc + ',' + emissionSecond}</p>
                 <p className="card-title">Energies relachées :</p>
-                <p>{energie}</p>
+                <p>{energie.principale}</p>
+                <p>{energie.secondaire}</p>
             </div>
             )
         };
