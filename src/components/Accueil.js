@@ -37,6 +37,7 @@ function Accueil() {
 
                 <div className="button-container">
                     <Link to='/calcul-dose-gamma' className="fake-button">Calcul de dose rayonnements γ</Link>
+                    <Link to='/memo-rad' className="fake-button">Memo RAD</Link>
                 </div>
 
             </div>
