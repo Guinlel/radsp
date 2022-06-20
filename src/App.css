@@ -246,6 +246,12 @@ body{
   margin-top: 1%;
 }
 
+/* Memo RAD */
+.memo{
+  width: 100%;
+  margin-top: 5%;
+}
+
 /* About */
 .about{
   background-color: white;

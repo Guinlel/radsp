@@ -23,7 +23,7 @@ function ChoixRadio(props) {
 
 return (
     <select className="choix-radio" onFocus={props.changeActive} onChange={(e) => props.changeHandler(e.target.value)}>
-        <option value="">Veuillez choisir un élément</option>
+        <option value="0">Veuillez choisir un élément</option>
         {optionRadio}
     </select>
 )

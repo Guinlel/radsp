@@ -42,8 +42,7 @@ function ActiviteRestante() {
         // eslint-disable-next-line
         radionucleide.map((radio) => {
             // eslint-disable-next-line
-            if (id  == radio.id) {
-                console.log(radio.periode);
+            if (id  == radio.id) {               
                 setPeriode(radio.periode);
                 setUnite(radio.unite);
             }

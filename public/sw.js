@@ -23,7 +23,10 @@ const Cache_Files= [
     '/static/media/etiquettes-transport.440f554b.png',
     '/static/media/Debit-dose-etiquettes.d940f996.png',
     '/static/media/gravite-etiquettes-transport.5163f718.png',
-    '/etiquette'
+    '/etiquette',
+    '/memo-rad',
+    '/static/media/double-enveloppe-rad.63ddcb70.png',
+    '/static/media/sas-sdis32.a0a9e3a7.png',
 ]
 
 // Installing SW

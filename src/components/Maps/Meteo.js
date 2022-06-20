@@ -26,7 +26,7 @@ function Meteo(props) {
             setLongitude(position.coords.longitude);
             meteoChange();
         })
-        switchDirection();
+    switchDirection();
     },[lat,lng,])
 
     const RafaleNul = ()=>{
@@ -56,7 +56,7 @@ function Meteo(props) {
     }
     const switchDirection = () => {
         // Utilisation des if car les switch case ne marchais pas
-        if (deg == null){
+        if (deg === null){
             setDirection("");
         }else if (deg<11.25 && deg>348.75){       
             setDirection("Nord")
@@ -103,11 +103,14 @@ function Meteo(props) {
                 setDeg(response.data.wind.deg);
                 setRafale(response.data.wind.gust);
                 setPlace(response.data.name);
-                setHumidite(response.data.main.humidity);
+                setHumidite(response.data.main.humidity);         
             }).catch((error)=>{
                 console.log(error);
             })
-        }     
+        }
+        switchDirection();
+        console.log(deg);
+        console.log(direction);
     }
 
     const handleRefresh = ()=>{

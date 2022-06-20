@@ -13,6 +13,7 @@ import Etiquette from './components/Etiquette';
 import About from './components/About.js';
 import CalcDebitDoseBeta from './components/Calculatrice/DebitDoseBeta';
 import CalcDebitDoseGamma from './components/Calculatrice/DebitDoseGamma';
+import MemoRad from './components/MemoRad.js';
 
 function App() {
     return(
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/etiquette" element={<Etiquette/>}/>
                 <Route path="/meteo" element={<Meteo/>}/>
                 <Route path="/a-propos" element={<About/>}/>
+                <Route path="/memo-rad" element={<MemoRad/>}/>
                 <Route path="*" element={
                     <main>
                         <Navigation/>
