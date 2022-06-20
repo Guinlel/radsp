@@ -111,7 +111,6 @@ function Meteo(props) {
     }
 
     const handleRefresh = ()=>{
-        console.log("Rafraichir");
         meteoChange();
     }
 

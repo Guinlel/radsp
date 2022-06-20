@@ -36,6 +36,12 @@ function Navigation() {
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-dose">Calcul de dose selon la distance </NavLink>
                     </li>
                     <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-dose-beta">Calcul de dose absorbée pour les rayonnements β </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-dose-gamma">Calcul de dose absorbée pour les rayonnements γ </NavLink>
+                    </li>
+                    <li>
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/calcul-perimetre">Calcul de distance selon la dose</NavLink>
                     </li>
                     <li>

@@ -13,6 +13,8 @@ const Cache_Files= [
     '/calcul-dose',
     '/calcul-perimetre',
     '/activite-restante',
+    '/calcul-dose-beta',
+    '/calcul-dose-gamma',
     '/meteo',
     '/static/media/icon-header-blanc.744d63dc.png',
     '/main.a81e53d800eb40de1a7e.hot-update.js',

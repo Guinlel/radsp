@@ -77,7 +77,7 @@ function ActiviteRestante() {
 
             <label className="field-input">
                 <input className="input"  type="number" value={actRes} disabled readOnly ></input>
-                <span>Activité restante</span>
+                <span className="placeholder">Activité restante</span>
             </label>
 
             <p>{"Temps restants d'activité : " +  dureeRestante + " " + uniteRestant}</p>

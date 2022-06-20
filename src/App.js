@@ -12,6 +12,8 @@ import Meteo from './components/Maps/Meteo';
 import Accueil from './components/Accueil';
 import Etiquette from './components/Etiquette';
 import About from './components/About.js';
+import CalcDebitDoseBeta from './components/Calculatrice/DebitDoseBeta';
+import CalcDebitDoseGamma from './components/Calculatrice/DebitDoseGamma';
 
 function App() {
     
@@ -22,6 +24,8 @@ function App() {
                 <Route path="/radionucleide" element={<Home/>}/>
                 <Route path="/conversion" element={<Conversion/>} />
                 <Route path="/calcul-dose" element={<CalculDose/>}/>
+                <Route path='/calcul-dose-beta' element={<CalcDebitDoseBeta/>}/>
+                <Route path='/calcul-dose-gamma' element={<CalcDebitDoseGamma/>}/>
                 <Route path="/calcul-perimetre" element={<CalculPerim/>}/>
                 <Route path="/activite-restante" element={<ActiviteRestante/>}/>
                 <Route path="/etiquette" element={<Etiquette/>}/>

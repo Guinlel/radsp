@@ -13,7 +13,7 @@ function CalculDose() {
     const [distanceInc, setDistanceInc] = useState(0);
     const [unite, setUnite] = useState("");
 
-    function Calcul() {
+    function calcul() {
         // Formule qui permet de connaitre la dose reçu en fonction de la dose de départ à une distance précise et de la distance de la 2ème dose 
         setDoseRech((doseMes * Math.pow(distanceInc, 2)) / Math.pow(distanceMes, 2));
 
@@ -50,7 +50,7 @@ function CalculDose() {
                     <span className="placeholder">Résultat : Dose calculée</span>
                 </label>
 
-                <button className="button-valide" onClick={() => Calcul()} >Valider</button>
+                <button className="button-valide" onClick={() => calcul()} >Valider</button>
             </div>
         </div>
     )

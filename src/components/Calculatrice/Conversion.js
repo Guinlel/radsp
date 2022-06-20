@@ -33,7 +33,7 @@ function Conversion(value) {
         
         <label className="field-input" >
           <input type="number" onChange={e => Conversion(e.target.value)}></input>
-          <span className='placeholde'>Valeur Ci</span>
+          <span className='placeholder'>Valeur Ci</span>
 
         </label>
         <label className='field-input'>

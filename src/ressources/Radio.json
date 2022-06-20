@@ -64,7 +64,7 @@
         "periode" : "432",
         "unite": "ans",
         "energie":{
-            "principale" : "Alpha 5486 85%",
+            "principale" : "Alpha 5486 kev 85%",
             "secondaire" : ""
         }
     },
