@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import { createRoot } from "react-dom/client"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Navigation from './components/Navigation';
@@ -16,8 +15,7 @@ import CalcDebitDoseBeta from './components/Calculatrice/DebitDoseBeta';
 import CalcDebitDoseGamma from './components/Calculatrice/DebitDoseGamma';
 
 function App() {
-    
-    const element = (
+    return(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Accueil/>} />
@@ -40,9 +38,6 @@ function App() {
             </Routes>
         </BrowserRouter>
     )
-    const container = document.getElementById('root');
-    const root = createRoot(container);
-    root.render(element);
 }
 
 export default App;

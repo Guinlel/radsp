@@ -32,6 +32,11 @@ function Accueil() {
 
                 <div className="button-container">
                     <Link to="/etiquette" className="fake-button">Etiquettes de Transport</Link>
+                    <Link to='/calcul-dose-beta' className="fake-button">Calcul de dose rayonnements β</Link>                 
+                </div>
+
+                <div className="button-container">
+                    <Link to='/calcul-dose-gamma' className="fake-button">Calcul de dose rayonnements γ</Link>
                 </div>
 
             </div>
