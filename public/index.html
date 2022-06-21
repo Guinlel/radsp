@@ -28,7 +28,7 @@
 
 <body>
   <div id="root"></div>
-  <script>if('serviceWorker' in navigator){
+  <script crossorigin src="...">if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js')
     .then(serviceWorker=>{
         console.log("Service Worker registered : ", serviceWorker);

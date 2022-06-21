@@ -262,6 +262,14 @@ body{
   margin: 1em;
 }
 
+.about ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.about li{
+  padding-top: 1rem;
+}
 /* Responsive */
 @media(max-width:768px){
 

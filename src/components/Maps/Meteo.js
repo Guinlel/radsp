@@ -7,10 +7,11 @@ function Meteo(props) {
     const [lng, setLongitude] = useState(null);
     const [speed, setSpeed] = useState(null);
     const [deg, setDeg] = useState(null);
-    const [direction, setDirection] = useState("");
+    const [direction, setDirection] = useState(null);
     const [place , setPlace] = useState("");
     const [raf, setRafale] = useState(null);
     const [humidite , setHumidite] = useState(null);
+    const [online , setOnline] = useState(true);
     // OpenWeather Api
     const API_KEY = "4d1836cb9cf0a6b1910a892834b98e55";
 
@@ -24,11 +25,40 @@ function Meteo(props) {
         navigator.geolocation.watchPosition((position) => {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
-            meteoChange();
+            
         })
-    switchDirection();
+    meteoChange();
+    isOnline();
     },[lat,lng,])
 
+
+    const Online = ()=>{
+        // Si l'utilisateur est connecter à internet afficher les infos sinon le prévient qu'il n'est pas connecter
+        if (online){
+            return(
+                <React.Fragment>
+                    <p className="meteo-place">{place}</p>
+                    <VentNul/>
+                    <RafaleNul/>
+                    <DirectionNull/>
+                    <Humidite/>                     
+                </React.Fragment>
+            )            
+        }else{
+            return <p>Vous n'êtes pas connecter à Internet.</p>
+        }
+    }
+
+    const isOnline = ()=>{
+        // Verifie si la connexion internet est active et set online à true ou false pour pouvoir le reutiliser dans le component Online
+        if (navigator.onLine){
+            setOnline(true);
+        } else {
+            setOnline(false);
+        }
+    }
+
+    // Ces 3 components verifie si l'api call et le set à bien ete effectuer et indique à l'utiliser de patienter
     const RafaleNul = ()=>{
         if (!raf ){
             return <p>Chargement en cours , Veuillez patienter ...</p> ;
@@ -93,11 +123,12 @@ function Meteo(props) {
         }
     }
 
-    const meteoChange = () => {
+
+    const meteoChange = async () => {
         if (lat === null){
             return <div><p>Les coordonnées n'ont pas été charger</p></div>
         }else {
-            axios.get("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=" + API_KEY).then((response) => {
+            await axios.get("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=" + API_KEY).then((response) => {
                 console.log(response);
                 setSpeed(response.data.wind.speed);
                 setDeg(response.data.wind.deg);
@@ -109,12 +140,16 @@ function Meteo(props) {
             })
         }
         switchDirection();
-        console.log(deg);
-        console.log(direction);
     }
 
     const handleRefresh = ()=>{
         meteoChange();
+    }
+
+    const DirectionNull = ()=>{
+        if (!direction && deg){
+            return <p> Cliquer sur rafraichir pour obtenir la direction du vent </p>
+        }
     }
 
 
@@ -122,10 +157,7 @@ function Meteo(props) {
         <div className="container">
             <Header/>
             <div className="card-meteo">         
-            <p className="meteo-place">{place}</p>
-            <VentNul/>
-            <RafaleNul/>
-            <Humidite/>           
+                <Online/>
             </div>
             <button className="btn-refresh" onClick={handleRefresh}>Rafraichir</button>
         </div>

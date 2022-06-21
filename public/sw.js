@@ -31,7 +31,6 @@ const Cache_Files= [
 
 // Installing SW
 self.addEventListener("install",(event)=>{
-    console.log("Service installing");
     event.waitUntil(caches.open(CACHE_NAME).then((cache)=>{return cache.addAll(Cache_Files)}))
 });
 
@@ -51,7 +50,7 @@ self.addEventListener("fetch",event=>{
 
 // SW activate
 self.addEventListener("activate",(event)=>{
-    console.log("Services activating.");
+
 })
 
 
