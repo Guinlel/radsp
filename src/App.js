@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
-import Navigation from './components/Navigation';
 import Conversion from './components/Calculatrice/Conversion';
 import CalculDose from './components/Calculatrice/CalcDose';
 import CalculPerim from './components/Calculatrice/CalcPerim';
@@ -14,6 +13,7 @@ import About from './components/About.js';
 import CalcDebitDoseBeta from './components/Calculatrice/DebitDoseBeta';
 import CalcDebitDoseGamma from './components/Calculatrice/DebitDoseGamma';
 import MemoRad from './components/MemoRad.js';
+import Header from './components/Header';
 
 function App() {
     return(
@@ -33,7 +33,7 @@ function App() {
                 <Route path="/memo-rad" element={<MemoRad/>}/>
                 <Route path="*" element={
                     <main>
-                        <Navigation/>
+                        <Header/>
                         <p> Vous vous êtes perdu !!! </p>
                     </main>
                 } />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../Header";
-import radionucleides from "../../ressources/Radio.json";
 
 function CalculPerim() {
     // Création des hooks nécessaires
@@ -8,11 +7,9 @@ function CalculPerim() {
     const [distanceDep, setDistanceDep] = useState(0);
     const [doseVoulu, setDoseVoulu] = useState(0);
     const [perimetre, setPerimetre] = useState('');
-    const radionucleide = radionucleides;
 
     const CalculPerim = () => {
         // Formule permmettant de calculer la distance du périmètre voulu
-        radionucleide.map((radio) => console.log(radio.name));
         setPerimetre((Math.sqrt((doseDep * Math.pow(distanceDep, 2)) / doseVoulu)))
     }
 

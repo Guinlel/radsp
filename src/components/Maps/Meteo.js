@@ -141,11 +141,11 @@ function Meteo(props) {
             })
         }
         switchDirection();
+        console.log(direction);
     }
 
     const handleRefresh = ()=>{
         meteoChange();
-        switchDirection();
     }
 
     const DirectionNull = ()=>{
