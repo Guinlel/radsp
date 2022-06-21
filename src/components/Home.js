@@ -51,6 +51,7 @@ function Home() {
 
 
     const handleActive = ()=>{
+        // permets de toggle de visible à invisible
         if (periode){
             setPeriode('true')
         } else {

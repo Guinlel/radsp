@@ -16,6 +16,7 @@ function ActiviteRestante() {
     const input = document.getElementsByClassName("input");
 
     const timeLeft = ()=>{
+        // Fonction permettant de calculer le temps de période restant et de l'afficher dans la même unité
         let periodeRestante = tmps/periode
         let duree
         if(unite ==='jours'){

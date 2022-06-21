@@ -20,10 +20,12 @@ function Navigation() {
     return (
         <div className="nav-container">
             <MenuBurger handleClick={handleClick}/>
+            {/* Permets le slide du menu de visible à invisible en toggle classe */}
             <nav id='navigation' className={isActive ? "navigation" : "navigation-visible"}>
                 <CloseLogo id="close-img" className="close-img" />
                 <ul className="ul-nav">
                     <li>
+                        {/* Le NavLink + navData permet de toggle classe afin de différencier le lien actif et ainsi indiqué à l'utilisateur la page sur laquelle il est */}
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/">Accueil</NavLink>
                     </li>
                     <li>

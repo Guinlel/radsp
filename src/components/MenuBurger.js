@@ -7,7 +7,6 @@ function MenuBurger(props){
     return(
         <div className="menu-burger-container">
             <MenuBurgerIcon id='menu-button' className="menu-burger" onClick={props.handleClick}/>
-            {/* <button id='menu-button'className="menu-burger" onClick={props.handleClick}>Menu</button> */}
         </div>
     )
 }

@@ -84,6 +84,7 @@ function Meteo(props) {
                     </div>
         }
     }
+    // Permets d'indiquer la direction du vent en fonction du degrès d'orientation du vent 
     const switchDirection = () => {
         // Utilisation des if car les switch case ne marchais pas
         if (deg === null){
@@ -144,6 +145,7 @@ function Meteo(props) {
 
     const handleRefresh = ()=>{
         meteoChange();
+        switchDirection();
     }
 
     const DirectionNull = ()=>{

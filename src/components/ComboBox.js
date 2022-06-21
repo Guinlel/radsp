@@ -7,6 +7,7 @@ function ChoixRadio(props) {
     const radios = radio[0];
 
     useEffect(() => {
+        // Mets en place un filtre pour les différentes utilisations de la comboBox
         if (props.filter === 'yes') {
             setOptionRadio(radios.filter(radio => radio.unite === 'minutes' || radio.unite === 'heures' || radio.unite==='jours').map((radio) =>
                 <option key={radio.id} value={radio.id} >

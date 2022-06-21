@@ -9,8 +9,6 @@ function CalcDebitDoseBeta() {
 
     const calcul = () => {
         console.log(Math.pow(9.7,-7));
-        console.log(act);
-        console.log(pourcEmission);
         let debitDose = ((9.7*Math.pow(10, -7)) * act * (pourcEmission / 100));
         setDebit(debitDose);
     }
