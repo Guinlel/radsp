@@ -27,7 +27,7 @@ function Accueil() {
 
                 <div className="button-container">
                     <Link to="/meteo" className="fake-button">Meteo</Link>
-                    <Link to="/radionucleide" className="fake-button">Radionucleide</Link>
+                    <Link to="/radionucleide" className="fake-button">Radionucléides</Link>
                 </div>
 
                 <div className="button-container">
