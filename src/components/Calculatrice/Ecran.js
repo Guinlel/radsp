@@ -15,7 +15,6 @@ function Ecran() {
         } else if (ecranDemi) {
             setDebitResiduel((debitDoseIni / Math.pow(2, ecranDemi)));
         } else {
-            console.log((debitResiduel / Math.pow(10, ecranDixieme)));
             setDebitResiduel((debitDoseIni / Math.pow(10, ecranDixieme)));
         }
     }
