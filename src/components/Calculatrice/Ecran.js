@@ -9,7 +9,7 @@ function Ecran() {
     const [debitResiduel, setDebitResiduel] = useState("");
 
     const calcul = () => {
-        // 
+        // If pour voir si l'utilisateur à rempli tous les imputs et si non savoir lesquelles pour faire le calcul en fonction 
         if (ecranDemi && ecranDixieme) {
             setDebitResiduel((debitDoseIni / Math.pow(2, ecranDemi))/Math.pow(10, ecranDixieme));
         } else if (ecranDemi) {
