@@ -50,7 +50,7 @@ function Navigation() {
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/activite-restante">Activité restante</NavLink>
                     </li>
                     <li>
-                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/ecran">Ecran</NavLink>
+                        <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/ecran">Ecrans</NavLink>
                     </li>
                     <li>
                         <NavLink className={(navData)=> navData.isActive ? "link-active" :"link"} to="/etiquette">Etiquettes de Transport</NavLink>

@@ -31,12 +31,12 @@ function Ecran() {
 
                 <label className="field-input">
                     <input type="number" onChange={(e) => setDebitResiduel("") + setDebitResiduel("") + setEcranDemi(e.target.value)}></input>
-                    <span className="placeholder">Nombre d'écran 1/2</span>
+                    <span className="placeholder">Nombre d'écrans 1/2</span>
                 </label>
 
                 <label className="field-input">
                     <input type="number" onChange={(e) =>setDebitResiduel("") + setEcranDixieme(e.target.value)}></input>
-                    <span className="placeholder">Nombre d'écran 1/10</span>
+                    <span className="placeholder">Nombre d'écrans 1/10</span>
                 </label>
 
                 <label className="field-input">

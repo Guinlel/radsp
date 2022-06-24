@@ -40,6 +40,9 @@ function Accueil() {
                     <Link to='/memo-rad' className="fake-button">Memo RAD</Link>
                 </div>
 
+                <div className="button-container">
+                    <Link to='/ecran' className="fake-button">Ecrans</Link>   
+                </div>
             </div>
         </div>
     )
