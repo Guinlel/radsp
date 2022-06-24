@@ -16,6 +16,7 @@ const Cache_Files= [
     '/calcul-dose-beta',
     '/calcul-dose-gamma',
     '/meteo',
+    '/ecran',
     '/static/media/icon-header-blanc.744d63dc.png',
     '/main.a81e53d800eb40de1a7e.hot-update.js',
     '/a-propos',

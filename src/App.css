@@ -200,7 +200,12 @@ body{
   margin-left: 3em;
 }
 
-
+/* Ecran */
+.card-ecran{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+}
 
 /* Calcul Perim */
 

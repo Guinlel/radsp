@@ -14,6 +14,7 @@ import CalcDebitDoseBeta from './components/Calculatrice/DebitDoseBeta';
 import CalcDebitDoseGamma from './components/Calculatrice/DebitDoseGamma';
 import MemoRad from './components/MemoRad.js';
 import Header from './components/Header';
+import Ecran from './components/Calculatrice/Ecran';
 
 function App() {
     return(
@@ -27,6 +28,7 @@ function App() {
                 <Route path='/calcul-dose-gamma' element={<CalcDebitDoseGamma/>}/>
                 <Route path="/calcul-perimetre" element={<CalculPerim/>}/>
                 <Route path="/activite-restante" element={<ActiviteRestante/>}/>
+                <Route path="/ecran" element={<Ecran/>}/>
                 <Route path="/etiquette" element={<Etiquette/>}/>
                 <Route path="/meteo" element={<Meteo/>}/>
                 <Route path="/a-propos" element={<About/>}/>

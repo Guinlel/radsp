@@ -141,7 +141,6 @@ function Meteo(props) {
             })
         }
         switchDirection();
-        console.log(direction);
     }
 
     const handleRefresh = ()=>{
