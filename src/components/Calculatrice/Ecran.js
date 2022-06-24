@@ -9,14 +9,12 @@ function Ecran() {
     const [debitResiduel, setDebitResiduel] = useState("");
 
     const calcul = () => {
+        // 
         if (ecranDemi && ecranDixieme) {
             setDebitResiduel((debitDoseIni / Math.pow(2, ecranDemi))/Math.pow(10, ecranDixieme));
         } else if (ecranDemi) {
-            console.log((debitDoseIni / Math.pow(2, ecranDemi)));
             setDebitResiduel((debitDoseIni / Math.pow(2, ecranDemi)));
         } else {
-            console.log(debitResiduel);
-            console.log(ecranDixieme);
             console.log((debitResiduel / Math.pow(10, ecranDixieme)));
             setDebitResiduel((debitDoseIni / Math.pow(10, ecranDixieme)));
         }
